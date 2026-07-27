@@ -2025,7 +2025,7 @@ let HERO_IMAGE_SRC = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAY
 // Hero image set at module level above
 
 // ─── WEEK VIEW ────────────────────────────────────────────────────────────────
-function WeekView({ T, phase, weekIdx, curWeek, dow, checked, toggle, workoutLog, setWorkoutLog, injury, save, iS, btn }) {
+function WeekView({ T, phase, weekIdx, curWeek, dow, checked, toggle, workoutLog, setWorkoutLog, injury, save, iS, btn, weeklyLog, WEEKS }) {
   const [editWod, setEditWod] = useState(null);
   const weeks = WEEKS[phase];
   const pct = (() => {
@@ -2041,16 +2041,64 @@ function WeekView({ T, phase, weekIdx, curWeek, dow, checked, toggle, workoutLog
 
   return (
     <div>
-      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:12}}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:6}}>
         <div>
           <span style={{fontSize:15,color:T.text}}>Week {curWeek.week}</span>
           <span style={{fontSize:11,color:T.textFaint,marginLeft:8}}>of {weeks.length} · {PHASE_META[phase].label}</span>
         </div>
-        <span style={{fontSize:12,color:TEAL}}>{pct}%</span>
+        <span style={{fontSize:12,color:TEAL}}>{pct}% this week</span>
       </div>
-      <div style={{height:3,background:T.border,borderRadius:2,marginBottom:14,overflow:"hidden"}}>
+      <div style={{height:3,background:T.border,borderRadius:2,marginBottom:8,overflow:"hidden"}}>
         <div style={{height:"100%",width:`${pct}%`,background:TEAL,transition:"width 0.4s"}} />
       </div>
+
+      {/* Auto-advance note */}
+      <div style={{fontSize:11,color:T.textFaint,marginBottom:12,fontStyle:"italic"}}>
+        Week advances automatically every Monday — whatever is ticked is logged, then you start fresh.
+      </div>
+
+      {/* Weekly completion history */}
+      {weeklyLog && Object.keys(weeklyLog).length > 0 && (() => {
+        const allPhases = ['pre','phase1','phase2','phase3'];
+        const maxIdx = {pre:2,phase1:4,phase2:4,phase3:4};
+        const history = [];
+        allPhases.forEach(ph => {
+          for (let wi = 0; wi < maxIdx[ph]; wi++) {
+            const key = `${ph}_w${wi}`;
+            if (weeklyLog[key] !== undefined) {
+              const wkNum = (WEEKS[ph]?.[wi]?.week) || (wi + 1);
+              history.push({ key, ph, wi, wkNum, ...weeklyLog[key] });
+            }
+          }
+        });
+        if (history.length === 0) return null;
+        return (
+          <div style={{background:T.surface,border:`1px solid ${T.border}`,borderRadius:9,padding:14,marginBottom:14}}>
+            <div style={{fontSize:10,textTransform:"uppercase",letterSpacing:"0.14em",color:T.textFaint,marginBottom:10}}>Past Weeks</div>
+            <div style={{display:"flex",flexWrap:"wrap",gap:8}}>
+              {history.map(h => {
+                const color = h.pct >= 80 ? TEAL : h.pct >= 50 ? AMBER : "#888";
+                return (
+                  <div key={h.key} style={{background:T.card,border:`1px solid ${color}44`,borderRadius:7,padding:"8px 12px",minWidth:80,textAlign:"center"}}>
+                    <div style={{fontSize:10,color:T.textFaint,marginBottom:2}}>{PHASE_META[h.ph]?.label} W{h.wkNum}</div>
+                    <div style={{fontSize:18,color,fontWeight:600}}>{h.pct}%</div>
+                    {h.loggedAt && <div style={{fontSize:9,color:T.textFaint,marginTop:2}}>{h.loggedAt}</div>}
+                  </div>
+                );
+              })}
+            </div>
+            <div style={{display:"flex",gap:12,marginTop:10}}>
+              {[[TEAL,"≥80% great"],[AMBER,"50–79% ok"],["#888","<50% stretch"]].map(([c,l])=>(
+                <div key={l} style={{display:"flex",alignItems:"center",gap:4}}>
+                  <div style={{width:8,height:8,borderRadius:"50%",background:c}} />
+                  <span style={{fontSize:10,color:T.textFaint}}>{l}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      })()}
+
       {injury && (
         <div style={{background:"#c4503012",border:"1px solid #c4505044",borderRadius:8,padding:"8px 12px",marginBottom:12,fontSize:12,color:"#c46050"}}>
           🦶 Injury mode active — showing modified programme
@@ -2990,6 +3038,7 @@ function App() {
   const [bills,         setBills]         = useState([]);
   const [reflection,    setReflection]    = useState("");
   const [hsLog,         setHsLog]         = useState({});
+  const [weeklyLog,     setWeeklyLog]     = useState({}); // { "phase1_w2": { pct: 78, completedAt: "2026-06-14" } }
   const [newTodo,       setNewTodo]       = useState("");
   const [newTodoCat,    setNewTodoCat]    = useState("Dive Training");
   const [newBill,       setNewBill]       = useState({name:"",amount:"",due:""});
@@ -3020,6 +3069,7 @@ function App() {
       if (d.bills)         setBills(d.bills);
       if (d.reflection)    setReflection(d.reflection);
       if (d.hsLog)         setHsLog(d.hsLog);
+      if (d.weeklyLog)     setWeeklyLog(d.weeklyLog);
       if (d.dark !== undefined)   setDark(d.dark);
       if (d.injury !== undefined) setInjury(d.injury);
     } catch {}
@@ -3032,7 +3082,7 @@ function App() {
         mochaLog, mochaScores, mochaBiting, mochaPotty, mochaWeekly,
         manualEntries, cyclePhase, cycleDay, cycleStart, bleedDays,
         feelingsLog, mustsDone, todoLog, mealPlan, bills, reflection,
-        hsLog, dark, injury, ...updates,
+        hsLog, dark, injury, weeklyLog, ...updates,
       };
       localStorage.setItem("sr_v4", JSON.stringify(data));
     } catch {}
@@ -3086,6 +3136,63 @@ function App() {
     const n = {...todoLog,[TODAY_STR]:day.filter(t=>t.id!==id)};
     setTodoLog(n); save({todoLog:n});
   }
+  // Auto-log weekly completion % whenever the week rolls over
+  // Runs on every render — cheap, just reads existing state
+  useEffect(() => {
+    // Calculate % for a given phase + weekIdx from checked keys
+    function calcPct(ph, wIdx) {
+      const wks = WEEKS[ph];
+      if (!wks || !wks[wIdx]) return null;
+      const w = wks[wIdx];
+      let total = 0, done = 0;
+      DAYS.forEach(d => {
+        const s = w.sessions[d];
+        if (!s || s.type === 'shabbat') return;
+        const dk = `${ph}_w${wIdx}_${d}`;
+        s.tasks.forEach((t, i) => {
+          if (t.startsWith('───')) return; // skip dividers
+          total++;
+          if (checked[`${dk}_${i}`]) done++;
+        });
+      });
+      return total === 0 ? 0 : Math.round((done / total) * 100);
+    }
+
+    const curKey = `${phase}_w${weekIdx}`;
+
+    // Log all past weeks that haven't been logged yet
+    const allPhases = ['pre', 'phase1', 'phase2', 'phase3'];
+    const maxIdx = { pre:2, phase1:4, phase2:4, phase3:4 };
+    let updates = {};
+    let changed = false;
+
+    allPhases.forEach(ph => {
+      const phStart = PHASE_STARTS[ph];
+      const phEnd = ph === 'phase3' ? new Date('2026-09-30') : PHASE_STARTS[
+        ph === 'pre' ? 'phase1' : ph === 'phase1' ? 'phase2' : 'phase3'
+      ];
+      if (new Date() < phStart) return; // phase hasn't started yet
+      for (let wi = 0; wi < maxIdx[ph]; wi++) {
+        const key = `${ph}_w${wi}`;
+        if (key === curKey) continue; // don't log current week yet
+        if (weeklyLog[key] !== undefined) continue; // already logged
+        const weekStart = new Date(phStart.getTime() + wi * 7*24*60*60*1000);
+        if (new Date() < weekStart) continue; // week hasn't started
+        const pct = calcPct(ph, wi);
+        if (pct !== null) {
+          updates[key] = { pct, loggedAt: new Date().toISOString().slice(0,10) };
+          changed = true;
+        }
+      }
+    });
+
+    if (changed) {
+      const next = { ...weeklyLog, ...updates };
+      setWeeklyLog(next);
+      save({ weeklyLog: next });
+    }
+  }, [phase, weekIdx]); // only re-run when week or phase changes
+
   function saveHs(data) {
     const n = {...hsLog,[TODAY_STR]:{...(hsLog[TODAY_STR]||{}),...data}};
     setHsLog(n); save({hsLog:n});
@@ -3200,6 +3307,7 @@ function App() {
           dow={dow} checked={checked} toggle={toggle}
           workoutLog={workoutLog} setWorkoutLog={setWorkoutLog}
           injury={injury} save={save} iS={iS} btn={btn}
+          weeklyLog={weeklyLog} WEEKS={WEEKS}
         />}
 
         {view==="camp" && <CampView
