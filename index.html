@@ -76,8 +76,7 @@ const TRACK_A = [
   { time:"6:30", icon:"🌙", label:"Dinner", detail:"Sit together — protected, no screens", cat:"anchor" },
   { time:"8:00", icon:"❤️", label:"Ben time", detail:"Sit, talk, just be — protected", cat:"anchor", critical:true },
   { time:"9:00", icon:"📓", label:"Prep tomorrow", detail:"15 min — lay the track", cat:"anchor" },
-  { time:"9:30", icon:"🌑", label:"Lights out", detail:"", cat:"anchor" },
-];
+  { time:"9:30", icon:"🌑", label:"Lights out", detail:"", cat:"anchor" }];
 
 const TRACK_B = [
   { time:"4:30", icon:"🌅", label:"Wake", detail:"Water, no phone", cat:"anchor" },
@@ -97,8 +96,7 @@ const TRACK_B = [
   { time:"6:30", icon:"🌙", label:"Dinner", detail:"Sit together — protected", cat:"anchor" },
   { time:"8:00", icon:"❤️", label:"Ben time", detail:"Protected. Same as every day.", cat:"anchor", critical:true },
   { time:"9:00", icon:"📓", label:"Prep tomorrow", detail:"15 min", cat:"anchor" },
-  { time:"9:30", icon:"🌑", label:"Lights out", detail:"", cat:"anchor" },
-];
+  { time:"9:30", icon:"🌑", label:"Lights out", detail:"", cat:"anchor" }];
 
 const RHYTHM_COLORS = {
   anchor:"#888", spirit:TEAL, training:TEAL, camp:AMBER,
@@ -108,8 +106,7 @@ const RHYTHM_COLORS = {
 const DAILY_MUSTS = [
   { id:"breathwork", icon:"🌬", label:"Breathwork practice (Skool)" },
   { id:"four_part",  icon:"🫁", label:"4 Part Breath" },
-  { id:"dive_video", icon:"🎥", label:"Watch dive video" },
-];
+  { id:"dive_video", icon:"🎥", label:"Watch dive video" }];
 
 const TODO_CATS = [
   { key:"Dive Training", color:TEAL,   icon:"🌊" },
@@ -118,14 +115,12 @@ const TODO_CATS = [
   { key:"Homeschool",    color:BLUE,   icon:"📚" },
   { key:"Honeysuckle",   color:ROSE,   icon:"🍯" },
   { key:"Life Admin",    color:"#8a7a5b", icon:"📋" },
-  { key:"Other",         color:"#888", icon:"✦" },
-];
+  { key:"Other",         color:"#888", icon:"✦" }];
 
 const MOCHA_PHASES = [
   { key:"phase1", label:"Phase 1: Foundation",      dates:"Jun 17–Jul 7",  color:TEAL,   goal:"Build the good student. Name, sit, down, stand, come, leave it, crate love." },
   { key:"phase2", label:"Phase 2: Level 2",          dates:"Jul 8–Aug 4",   color:AMBER,  goal:"Proof, distance, distraction. Signals replace lures. Stay 10+ sec. Recall 20ft." },
-  { key:"phase3", label:"Phase 3: Real World Proof", dates:"Aug 5–Sep 2",   color:PURPLE, goal:"3 environments for every command. Off-leash recall. Sep 2: first test." },
-];
+  { key:"phase3", label:"Phase 3: Real World Proof", dates:"Aug 5–Sep 2",   color:PURPLE, goal:"3 environments for every command. Off-leash recall. Sep 2: first test." }];
 function mochaPhase() {
   const d = new Date();
   if (d < new Date("2026-07-08")) return "phase1";
@@ -139,14 +134,12 @@ const MOCHA_SESSIONS = [
   { id:"handling", icon:"👋", label:"Handling",      note:"Daily body exam. Kids rotate. Log who did it." },
   { id:"freeplay", icon:"🎾", label:"Free Play",     note:"Tug toy only — never hands or feet." },
   { id:"food",     icon:"🍽", label:"Food Protocol", note:"Sit → wait for eye contact → YES → release word → eat." },
-  { id:"potty",    icon:"🌿", label:"Potty",         note:"Same spot, same cue, every time." },
-];
+  { id:"potty",    icon:"🌿", label:"Potty",         note:"Same spot, same cue, every time." }];
 
 const MOCHA_COMMANDS = [
   "Name Recognition","Sit","Down","Stand","Come / Recall",
   "Food Protocol","Leave It","UP (surfaces)","Stay / Wait",
-  "OFF — no jumping","Place / Bed","Door Wait","Heel / Let's Go","Wipe Feet",
-];
+  "OFF — no jumping","Place / Bed","Door Wait","Heel / Let's Go","Wipe Feet"];
 
 const INJURY_WEEK = {
   Mon:{ type:"strength", label:"Upper Body + Core A + Glute Activation + Ankle Rehab", tasks:[
@@ -179,8 +172,7 @@ const INJURY_WEEK = {
     "Lower Back Extensions 3×15 ← ALWAYS after abs.",
     "─── FRENZEL PRACTICE ─── (5 min)",
     "Nose clip on. Frenzel balloon: 5 min slow reps. Tongue back, seal throat, push air to ears.",
-    "Log: reps done, which ear lags, any discomfort.",
-  ], note:"Ankle rehab first — before any load. You're mid-stage (day 17, brace on, weight bearing) — single leg balance is now appropriate. Build heel raises to single leg over coming weeks."},
+    "Log: reps done, which ear lags, any discomfort."], note:"Ankle rehab first — before any load. You're mid-stage (day 17, brace on, weight bearing) — single leg balance is now appropriate. Build heel raises to single leg over coming weeks."},
 
   Tue:{ type:"pool", label:"Pool — Arms Only + Ankle Rehab", tasks:[
     "─── ANKLE REHAB — BEFORE POOL ───",
@@ -199,8 +191,7 @@ const INJURY_WEEK = {
     "Log: pulse after each set, difficulty",
     "─── POOLSIDE FRENZEL + ANKLE MOBILITY ───",
     "Seated at pool edge — nose clip on, 5 min Frenzel reps. Ears are warm.",
-    "Ankle circles in water × 30 each direction — the water resistance adds gentle load.",
-  ], note:"⚠ Arms only in pool. No flutter kick. No wall push-off. Buddy present. Water is actually great for ankle — buoyancy reduces load while you can move through full range."},
+    "Ankle circles in water × 30 each direction — the water resistance adds gentle load."], note:"⚠ Arms only in pool. No flutter kick. No wall push-off. Buddy present. Water is actually great for ankle — buoyancy reduces load while you can move through full range."},
 
   Wed:{ type:"dry", label:"Breathwork + Static + Glutes (Hip Hinge) + Core B + Ankle Rehab", tasks:[
     "─── ANKLE REHAB — MORNING ───",
@@ -228,8 +219,7 @@ const INJURY_WEEK = {
     "Elevated Side Plank Dips 3×10 each side — feet on bench, dip and drive.",
     "Lower Back Extensions 3×15 ← always after core.",
     "─── FRENZEL PRACTICE ─── (5 min)",
-    "Nose clip on. Frenzel balloon: equalise while SUPINE — lying on back, mimics depth position.",
-  ], note:"Step-up and lateral step-down are mid-stage rehab milestones. The lateral step-down re-trains the precise neuromuscular control the sprain disrupted. It will feel wobbly — that is the point."},
+    "Nose clip on. Frenzel balloon: equalise while SUPINE — lying on back, mimics depth position."], note:"Step-up and lateral step-down are mid-stage rehab milestones. The lateral step-down re-trains the precise neuromuscular control the sprain disrupted. It will feel wobbly — that is the point."},
 
   Thu:{ type:"strength", label:"Glutes (Quad Focus) + Upper Body + Ankle Rehab", tasks:[
     "─── ANKLE REHAB — MORNING ───",
@@ -257,8 +247,7 @@ const INJURY_WEEK = {
     "Ab Leg Raises 3×15 — lying flat",
     "Lower Back Extensions 3×15 ← always after abs",
     "─── FRENZEL PRACTICE ─── (5 min)",
-    "Nose clip on. Frenzel balloon: mouthfill technique — fill mouth with air, seal lips, push to ears. Key skill below 30m.",
-  ], note:"Y Balance is your proprioception gold standard. The sprain damaged nerve receptors in the ankle — Y Balance directly retrains them. Wobbling is normal and necessary."},
+    "Nose clip on. Frenzel balloon: mouthfill technique — fill mouth with air, seal lips, push to ears. Key skill below 30m."], note:"Y Balance is your proprioception gold standard. The sprain damaged nerve receptors in the ankle — Y Balance directly retrains them. Wobbling is normal and necessary."},
 
   Fri:{ type:"dry", label:"Breathwork + CO2 + Glute Endurance + Core C + Ankle Rehab", tasks:[
     "─── ANKLE REHAB — MORNING ───",
@@ -285,8 +274,7 @@ const INJURY_WEEK = {
     "Plank Hold 2×30 sec — breathe steadily.",
     "Lower Back Extensions 3×15 ← always last.",
     "─── FRENZEL PRACTICE ─── (5 min)",
-    "Nose clip on. Frenzel balloon: equalise while EXHALED — lungs empty, simulates compression at depth. Hardest skill. Most important for 45m.",
-  ], note:"Fasting day — ankle rehab and breathwork are perfect. Calf stretch inchworm restores dorsiflexion range, which the brace has been restricting. Do it gently."},
+    "Nose clip on. Frenzel balloon: equalise while EXHALED — lungs empty, simulates compression at depth. Hardest skill. Most important for 45m."], note:"Fasting day — ankle rehab and breathwork are perfect. Calf stretch inchworm restores dorsiflexion range, which the brace has been restricting. Do it gently."},
 
   Sat:{ type:"rest", label:"Active Rest + Ankle Rehab + Mobility + Frenzel", tasks:[
     "─── ANKLE REHAB — FULL SESSION (most time today, fully rested) ───",
@@ -306,8 +294,7 @@ const INJURY_WEEK = {
     "4 Section Breathing — 10 rounds",
     "─── FRENZEL PRACTICE ─── (10 min — most time, most positions)",
     "Nose clip on. Frenzel balloon: 10 min. Work through: upright → reclined → lying flat → head tilted back → inverted over sofa.",
-    "Log: which position hardest, which ear lags, progress from last week.",
-  ], note:"Saturday is your most complete ankle rehab day. The progression milestone is single leg heel raises — when you can do 3×15 pain-free, you are close to returning to pool kicking."},
+    "Log: which position hardest, which ear lags, progress from last week."], note:"Saturday is your most complete ankle rehab day. The progression milestone is single leg heel raises — when you can do 3×15 pain-free, you are close to returning to pool kicking."},
 
   Sun:{ type:"pool", label:"Pool — Arms Only (Longer) + Ankle Rehab + Frenzel", tasks:[
     "─── ANKLE REHAB — BEFORE POOL ───",
@@ -329,8 +316,7 @@ const INJURY_WEEK = {
     "─── POOLSIDE FRENZEL ─── (5 min)",
     "Nose clip on. Frenzel reps at water surface — head tilted back, equalise as if descending.",
     "Supervised head-down bob 3×5 to 1m if buddy present — practise equalising on descent. Stop at any ear pain.",
-    "Log: which ear equalises slower, any pressure.",
-  ], note:"Sunday longer session. Push arm pull sets. No kick. Buddy present always. Standing in shallow water is legitimate progressive ankle loading — the buoyancy is doing rehab work."},
+    "Log: which ear equalises slower, any pressure."], note:"Sunday longer session. Push arm pull sets. No kick. Buddy present always. Standing in shallow water is legitimate progressive ankle loading — the buoyancy is doing rehab work."},
 };
 const WEEKS = {
   pre: [
@@ -364,28 +350,24 @@ const WEEKS = {
         "Deadbugs 3×12 each side — opposite arm + leg, exhale as you lower. Lower back stays flat.",
         "Dumbbell Rollout 3×10 from knees — one dumbbell in each hand, roll forward, brace core, slow back.",
         "Lying Leg Raises 3×15 — flat on back, legs straight, slow lower without touching floor.",
-        "Lower Back Extensions 3×15 ← ALWAYS after abs.",
-      ]},
+        "Lower Back Extensions 3×15 ← ALWAYS after abs."]},
       Tue:{type:"cardio", label:"Cardio Intro", tasks:[
         "Easy walk or light jog 20-25 min — conversational pace, you should be able to talk.",
         "Heart rate: 60-65% max (roughly 220 minus your age × 0.6). Don't push.",
-        "Focus on breathing rhythm — inhale 3 steps, exhale 3 steps.",
-      ]},
+        "Focus on breathing rhythm — inhale 3 steps, exhale 3 steps."]},
       Wed:{type:"rest", label:"Admin + Breathwork", tasks:[
         "Obtain physician medical clearance — no in-water training until signed and returned.",
         "Sign and return David Lee waiver.",
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections: belly → lower chest → upper chest → shoulders. Full exhale. 10 rounds.",
         "─── FRENZEL PRACTICE ─── (5 min)",
-        "Nose clip on. Frenzel balloon: 5 min. Today: equalise lying down — like you will be at depth.",
-      ], note:"No pool sessions until medical clearance is signed and returned."},
+        "Nose clip on. Frenzel balloon: 5 min. Today: equalise lying down — like you will be at depth."], note:"No pool sessions until medical clearance is signed and returned."},
       Thu:{type:"rest", label:"Rest + Breathwork + Frenzel", tasks:[
         "Full rest — your body adapts during rest, not during training.",
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections: belly → lower chest → upper chest → shoulders. Full exhale. 10 rounds.",
         "─── FRENZEL PRACTICE ─── (5 min)",
-        "Nose clip on. Frenzel balloon: 5 min. Keep it easy today.",
-      ]},
+        "Nose clip on. Frenzel balloon: 5 min. Keep it easy today."]},
       Fri:{type:"cardio", label:"Cardio + Breathwork", tasks:[
         "Easy walk or jog 25-30 min — same easy pace as Tuesday.",
         "Breathe through nose only for first 10 min if possible — builds CO2 tolerance.",
@@ -403,8 +385,7 @@ const WEEKS = {
         "Deadbugs 3×10 each side — slow exhale on every rep.",
         "Supermans 3×15 — prone, opposite arm + leg, hold 2 sec at top.",
         "Plank Hold 2×30 sec — breathe steadily.",
-        "Lower Back Extensions 3×15 ← always last.",
-      ]},
+        "Lower Back Extensions 3×15 ← always last."]},
       Sat:{type:"shabbat", label:"Shabbat", tasks:["Rest 🕯️ — Shabbat. Minimal footprint. No training initiated."]},
       Sun:{type:"pool", label:"Pool Intro + Grocery", tasks:[
         "Grocery shop + full week meal prep.",
@@ -415,8 +396,7 @@ const WEEKS = {
         "Total: 700m. Log your time.",
         "─── POOLSIDE FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel reps at pool edge — ears are warm after swimming.",
-        "Weekly reflection — what felt easy, what felt hard, what to focus on next week.",
-      ]},
+        "Weekly reflection — what felt easy, what felt hard, what to focus on next week."]},
     }},
     { week:2, sessions:{
       Mon:{type:"dry", label:"4SB + Dry Static", tasks:[
@@ -452,12 +432,10 @@ const WEEKS = {
         "Deadbugs 3×12 each side — opposite arm + leg, exhale as you lower. Lower back stays flat.",
         "Dumbbell Rollout 3×10 from knees — one dumbbell in each hand, roll forward, brace core, slow back.",
         "Lying Leg Raises 3×15 — flat on back, legs straight, slow lower without touching floor.",
-        "Lower Back Extensions 3×15 ← ALWAYS after abs.",
-      ]},
+        "Lower Back Extensions 3×15 ← ALWAYS after abs."]},
       Tue:{type:"cardio", label:"Cardio", tasks:[
         "Light jog or bike 25-30 min — 60-65% max HR.",
-        "Breathing focus: inhale 4 steps, exhale 4 steps. Rhythm is the point.",
-      ]},
+        "Breathing focus: inhale 4 steps, exhale 4 steps. Rhythm is the point."]},
       Wed:{type:"pool", label:"Pool Easy + Core A", tasks:[
         "─── POOL SESSION ───",
         "200m warm-up — easy freestyle, breathing every 3 strokes.",
@@ -471,15 +449,13 @@ const WEEKS = {
         "Lying Leg Raises 3×15 — flat on back, legs straight, lower toward floor without touching. Slow and controlled.",
         "Lower Back Extensions 3×15 ← always after abs.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon poolside: 5 min reps.",
-      ]},
+        "Nose clip on. Frenzel balloon poolside: 5 min reps."]},
       Thu:{type:"rest", label:"Rest + Breathwork + Frenzel", tasks:[
         "Full rest from training.",
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections: belly → lower chest → upper chest → shoulders. Full exhale. 10 rounds.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: equalise lying down today.",
-      ]},
+        "Nose clip on. Frenzel balloon: equalise lying down today."]},
       Fri:{type:"cardio", label:"Cardio + Core A", tasks:[
         "Jog or walk 30 min — 65% max HR. Nasal breathing first 10 min.",
         "─── CORE BLOCK A ─── (8 min — after cardio when warm)",
@@ -497,8 +473,7 @@ const WEEKS = {
         "Deadbugs 3×10 each side — slow exhale on every rep.",
         "Supermans 3×15 — prone, opposite arm + leg, hold 2 sec at top.",
         "Plank Hold 2×30 sec — breathe steadily.",
-        "Lower Back Extensions 3×15 ← always last.",
-      ]},
+        "Lower Back Extensions 3×15 ← always last."]},
       Sat:{type:"shabbat", label:"Shabbat", tasks:["Rest 🕯️ — Shabbat."]},
       Sun:{type:"pool", label:"Pool + Grocery", tasks:[
         "Grocery shop + full week meal prep.",
@@ -509,10 +484,8 @@ const WEEKS = {
         "Total: 900m. Log time. Compare to last Sunday.",
         "─── FRENZEL POOLSIDE ─── (5 min)",
         "Nose clip on. Frenzel reps at pool edge.",
-        "Weekly reflection — what improved, what is still hard.",
-      ]},
-    }},
-  ],
+        "Weekly reflection — what improved, what is still hard."]},
+    }}],
   phase1: [
     { week:3, sessions:{
       Mon:{type:"cardio", label:"Cardio + Glute Activation + Breathwork", tasks:[
@@ -538,9 +511,7 @@ const WEEKS = {
         "Romanian Deadlift 3×8 — HEAVY dumbbells, hinge at hip, feel hamstrings load. Drive hips forward to stand.",
         "Hip Thrust Weighted 3×10 — shoulders on sofa/bench, dumbbell on hips. Squeeze 2 sec at top.",
         "Bulgarian Split Squat 3×8 each side — rear foot elevated, heavy dumbbells. Front knee tracks over toes.",
-        "Glute Bridge Pulse 1×30 — drop to floor, pulse fast at top. Burn.",
-
-      ]},
+        "Glute Bridge Pulse 1×30 — drop to floor, pulse fast at top. Burn."]},
       Tue:{type:"dry", label:"4SB + Dry Static + Core A", tasks:[
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections: belly → lower chest → upper chest → shoulders. Full exhale. 10 rounds.",
@@ -571,8 +542,7 @@ const WEEKS = {
         "Deadbugs 3×12 each side — opposite arm + leg, exhale as you lower. Lower back stays flat.",
         "Dumbbell Rollout 3×10 from knees — one dumbbell in each hand, roll forward, brace core, slow back.",
         "Lying Leg Raises 3×15 — flat on back, legs straight, slow lower without touching floor.",
-        "Lower Back Extensions 3×15 ← ALWAYS after abs.",
-      ]},
+        "Lower Back Extensions 3×15 ← ALWAYS after abs."]},
       Wed:{type:"pool", label:"Pool Cardio + Glutes + Core B", tasks:[
         "─── POOL CARDIO ───",
         "200m warm-up — easy freestyle, breathe every 3.",
@@ -590,8 +560,7 @@ const WEEKS = {
         "Elevated Side Plank Dips 3×10 each side — feet on bench, dip and drive.",
         "Lower Back Extensions 3×15 ← always after core.",
         "─── FRENZEL POOLSIDE ─── (5 min)",
-        "Nose clip on. Frenzel balloon: 5 min. Ears are warm — good time.",
-      ]},
+        "Nose clip on. Frenzel balloon: 5 min. Ears are warm — good time."]},
       Thu:{type:"rest", label:"Active Recovery + Breathwork + Frenzel", tasks:[
         "Pigeon pose each side 90 sec — opens glutes and hip external rotators.",
         "Lying glute stretch 2×60 sec each side — figure-four, pull knee to chest.",
@@ -634,16 +603,14 @@ const WEEKS = {
         "Plank Hold 2×30 sec — breathe steadily, simulate hold stillness.",
         "Lower Back Extensions 3×15 ← always last.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: equalise while exhaled — lungs empty. Hardest and most important skill for 45m.",
-      ]},
+        "Nose clip on. Frenzel balloon: equalise while exhaled — lungs empty. Hardest and most important skill for 45m."]},
       Sat:{type:"shabbat", label:"Shabbat / On-call", tasks:[
-        "Minimal footprint day. Available if camp needs you.",
+        "Rest day.",
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale. Slow and still.",
         "─── FRENZEL ─── (10 min — most time today)",
         "Nose clip on. Frenzel balloon: 10 min. All positions: upright → reclined → lying flat → inverted over sofa.",
-        "Log: which position is hardest, any progress this week.",
-      ]},
+        "Log: which position is hardest, any progress this week."]},
       Sun:{type:"pool", label:"Pool + Grocery", tasks:[
         "Grocery shop + full week meal prep.",
         "─── POOL SESSION ───",
@@ -653,8 +620,7 @@ const WEEKS = {
         "Total: 1300m. Log 1000m time (from 300m mark).",
         "─── FRENZEL POOLSIDE ─── (5 min)",
         "Nose clip on. Frenzel reps. Head tilted back like about to descend.",
-        "Weekly reflection — strength, breathwork, pool progress.",
-      ]},
+        "Weekly reflection — strength, breathwork, pool progress."]},
     }},
     { week:4, sessions:{
       Mon:{type:"cardio", label:"Cardio + Glutes + Breathwork", tasks:[
@@ -678,9 +644,7 @@ const WEEKS = {
         "Romanian Deadlift 3×8 — HEAVY dumbbells, hinge at hip, feel hamstrings load. Drive hips forward to stand.",
         "Hip Thrust Weighted 3×10 — shoulders on sofa/bench, dumbbell on hips. Squeeze 2 sec at top.",
         "Bulgarian Split Squat 3×8 each side — rear foot elevated, heavy dumbbells. Front knee tracks over toes.",
-        "Glute Bridge Pulse 1×30 — drop to floor, pulse fast at top. Burn.",
-
-      ]},
+        "Glute Bridge Pulse 1×30 — drop to floor, pulse fast at top. Burn."]},
       Tue:{type:"dry", label:"4SB + Dry Static + Core A", tasks:[
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale. 10 rounds. Go slow.",
@@ -693,8 +657,7 @@ const WEEKS = {
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel balloon: supine position today — lying on back.",
         "─── VISUALISATION ─── (5 min)",
-        "45m. Focus on the turn — touch the plate, tuck, push off, ascend. Smooth.",
-      ]},
+        "45m. Focus on the turn — touch the plate, tuck, push off, ascend. Smooth."]},
       Wed:{type:"pool", label:"Pool Cardio + Glutes + Core B", tasks:[
         "─── POOL CARDIO ───",
         "200m warm-up.",
@@ -760,15 +723,13 @@ const WEEKS = {
         "Hollow Hold 3×25 sec (build 5 sec from last week). Deadbugs 3×10 each side. Supermans 3×15. Plank Hold 2×35 sec.",
         "Lower Back Extensions 3×15 ← always last.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: exhaled position. Lungs empty. Push air to ears without using lungs.",
-      ]},
+        "Nose clip on. Frenzel balloon: exhaled position. Lungs empty. Push air to ears without using lungs."]},
       Sat:{type:"shabbat", label:"Shabbat / On-call", tasks:[
         "Minimal footprint day.",
         "─── BREATHWORK ───",
         "4 Section Breathing — 10 rounds. Slow.",
         "─── FRENZEL ─── (10 min)",
-        "Nose clip on. Frenzel balloon: 10 min. All positions. Focus on any ear that is lagging.",
-      ]},
+        "Nose clip on. Frenzel balloon: 10 min. All positions. Focus on any ear that is lagging."]},
       Sun:{type:"pool", label:"Pool + Grocery", tasks:[
         "Grocery shop + meal prep.",
         "─── POOL SESSION ───",
@@ -778,8 +739,7 @@ const WEEKS = {
         "Total: 1500m. Log 1000m time.",
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel poolside. Log: both ears equalising evenly?",
-        "Weekly reflection. Phase 1 building well.",
-      ]},
+        "Weekly reflection. Phase 1 building well."]},
     }},
     { week:5, sessions:{
       Mon:{type:"hiit", label:"HIIT Cardio + Glutes + Breathwork", tasks:[
@@ -791,8 +751,7 @@ const WEEKS = {
         "─── 4 SECTION BREATHING ─── (10 rounds — after HIIT when you need it most)",
         "4 sections. Full exhale. Feel your breath rate slow down.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: 5 min.",
-      ], note:"First anaerobic effort — lactic acid + rising CO2 = the freediving stimulus on land."},
+        "Nose clip on. Frenzel balloon: 5 min."], note:"First anaerobic effort — lactic acid + rising CO2 = the freediving stimulus on land."},
       Tue:{type:"dry", label:"Dry Static Intro + NPSA + Core A", tasks:[
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale. 10 rounds. Take your time.",
@@ -807,8 +766,7 @@ const WEEKS = {
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel balloon: mouthfill today — fill mouth, seal, push to ears.",
         "─── VISUALISATION ─── (5 min)",
-        "45m. Focus on freefall — point where lungs compress and you stop kicking. Relax into it.",
-      ], note:"NPSA (Normal exPiratory breath hold Static Apnea) — do not push past comfort. Technique over time."},
+        "45m. Focus on freefall — point where lungs compress and you stop kicking. Relax into it."], note:"NPSA (Normal exPiratory breath hold Static Apnea) — do not push past comfort. Technique over time."},
       Wed:{type:"pool", label:"Pool + Apnea Intro + Glutes + Core B", tasks:[
         "─── POOL SESSION — FIRST BREATH HOLDS ─── (⚠ BUDDY REQUIRED)",
         "300m warm-up — easy freestyle.",
@@ -824,8 +782,7 @@ const WEEKS = {
         "Dumbbell Suitcase Hold 3×35 sec each side — one heavy dumbbell at side, walk tall or stand still. Resist trunk rotation and lean. Anti-rotation core.",
         "Lower Back Extensions 3×15 ← always after core.",
         "─── FRENZEL POOLSIDE ─── (5 min)",
-        "Nose clip on. Frenzel reps. Ears warm — best time to practise.",
-      ], note:"⚠ First underwater reps — buddy required. Never alone."},
+        "Nose clip on. Frenzel reps. Ears warm — best time to practise."], note:"⚠ First underwater reps — buddy required. Never alone."},
       Thu:{type:"rest", label:"Active Recovery + Breathwork + Frenzel", tasks:[
         "Pigeon pose 90 sec each side. Lying glute stretch 2×60 sec each side.",
         "─── 4 SECTION BREATHING ─── (10 rounds)",
@@ -861,15 +818,13 @@ const WEEKS = {
         "Hollow Hold 3×25 sec. Deadbugs 3×10 each side. Supermans 3×15. Plank Hold 2×35 sec.",
         "Lower Back Extensions 3×15 ← always last.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: exhaled position. Hardest drill — lungs empty, push to ears.",
-      ]},
+        "Nose clip on. Frenzel balloon: exhaled position. Hardest drill — lungs empty, push to ears."]},
       Sat:{type:"shabbat", label:"Shabbat / On-call", tasks:[
         "Minimal footprint.",
         "─── BREATHWORK ───",
         "4 Section Breathing — 10 rounds.",
         "─── FRENZEL ─── (10 min)",
-        "Nose clip on. All positions. Most time, most focus of the week.",
-      ]},
+        "Nose clip on. All positions. Most time, most focus of the week."]},
       Sun:{type:"pool", label:"Pool + Grocery", tasks:[
         "Grocery shop + meal prep.",
         "─── POOL SESSION ─── (⚠ buddy required for breath hold sets)",
@@ -880,8 +835,7 @@ const WEEKS = {
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel poolside.",
         "Weekly reflection. 5 weeks in. Note what has changed since Week 1.",
-        "Bill check.",
-      ]},
+        "Bill check."]},
     }},
     { week:6, sessions:{
       Mon:{type:"hiit", label:"HIIT Cardio + Glutes + Breathwork", tasks:[
@@ -905,8 +859,7 @@ const WEEKS = {
         "Romanian Deadlift 3×8 — HEAVY dumbbells, hinge at hip, feel hamstrings load. Drive hips forward to stand.",
         "Hip Thrust Weighted 3×10 — shoulders on sofa/bench, dumbbell on hips. Squeeze 2 sec at top.",
         "Bulgarian Split Squat 3×8 each side — rear foot elevated, heavy dumbbells. Front knee tracks over toes.",
-        "Glute Bridge Pulse 1×30 — drop to floor, pulse fast at top. Burn.",
-      ]},
+        "Glute Bridge Pulse 1×30 — drop to floor, pulse fast at top. Burn."]},
       Tue:{type:"dry", label:"Dry Static + NPSA + Core A", tasks:[
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale.",
@@ -938,8 +891,7 @@ const WEEKS = {
         "Deadbugs 3×12 each side — opposite arm + leg, exhale as you lower. Lower back stays flat.",
         "Dumbbell Rollout 3×10 from knees — one dumbbell in each hand, roll forward, brace core, slow back.",
         "Lying Leg Raises 3×15 — flat on back, legs straight, slow lower without touching floor.",
-        "Lower Back Extensions 3×15 ← ALWAYS after abs.",
-      ]},
+        "Lower Back Extensions 3×15 ← ALWAYS after abs."]},
       Wed:{type:"pool", label:"Pool + Apnea + Glutes + Core B", tasks:[
         "─── POOL SESSION ─── (⚠ buddy required)",
         "500m warm-up.",
@@ -976,8 +928,7 @@ const WEEKS = {
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "Slow. Full exhale every time.",
         "─── FRENZEL ─── (10 min — active recovery means more time)",
-        "Nose clip on. Frenzel balloon: all positions, 10 min. Best practice day this week.",
-      ]},
+        "Nose clip on. Frenzel balloon: all positions, 10 min. Best practice day this week."]},
       Fri:{type:"hiit", label:"HIIT Intervals + Core C + Glute Endurance", tasks:[
         "─── HIIT CARDIO ─── (fasting day — moderate intensity)",
         "Warm-up 5 min. 6×2 min at 85% max HR — 60 sec easy between. Cool-down 5 min.",
@@ -987,15 +938,13 @@ const WEEKS = {
         "Hollow Hold 3×30 sec. Deadbugs 3×10 each side. Supermans 3×15. Plank Hold 2×40 sec.",
         "Lower Back Extensions 3×15 ← always last.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: exhaled position. Lungs empty. 5 min.",
-      ]},
+        "Nose clip on. Frenzel balloon: exhaled position. Lungs empty. 5 min."]},
       Sat:{type:"shabbat", label:"Shabbat / On-call", tasks:[
         "Minimal footprint.",
         "─── BREATHWORK ───",
         "4 Section Breathing — 10 rounds.",
         "─── FRENZEL ─── (10 min)",
-        "Nose clip on. All positions. Can you equalise easily lying flat? That is the Phase 1 milestone.",
-      ]},
+        "Nose clip on. All positions. Can you equalise easily lying flat? That is the Phase 1 milestone."]},
       Sun:{type:"pool", label:"Pool Peak + Grocery", tasks:[
         "Grocery shop + meal prep.",
         "─── POOL SESSION ─── (⚠ buddy required — peak Phase 1 volume)",
@@ -1006,10 +955,8 @@ const WEEKS = {
         "Total: 2000m. Log: 1000m time, pulse after each hold.",
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel poolside. Log: total progress since Week 1.",
-        "Weekly reflection — Phase 1 complete. What has changed?",
-      ]},
-    }},
-  ],
+        "Weekly reflection — Phase 1 complete. What has changed?"]},
+    }}],
   phase2: [
     { week:7, sessions:{
       Mon:{type:"strength", label:"Strength Upper + Glutes + Breathwork", tasks:[
@@ -1029,9 +976,7 @@ const WEEKS = {
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale. 10 rounds.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: 5 min. Mouthfill focus.",
-        "Camp: morning check-ins + dinner check.",
-      ], note:"Phase 2 — strength and power added. 60-70% effort this week — build form before increasing weight."},
+        "Nose clip on. Frenzel balloon: 5 min. Mouthfill focus."], note:"Phase 2 — strength and power added. 60-70% effort this week — build form before increasing weight."},
       Tue:{type:"pool", label:"Pool Easy + Glute Endurance", tasks:[
         "─── POOL SESSION ───",
         "800m easy freestyle — breathing every 6-8 strokes. Recovery swim, not hard.",
@@ -1040,9 +985,7 @@ const WEEKS = {
         "─── POOLSIDE GLUTE ENDURANCE ───",
         "Single-Leg Glute Bridge 3×15 each side. Sumo Squat Pulse 3×20. Donkey Kicks 3×15 each side.",
         "─── FRENZEL POOLSIDE ─── (5 min)",
-        "Nose clip on. Frenzel reps. Ears warm.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel reps. Ears warm."]},
       Wed:{type:"strength", label:"Strength Lower + Glutes + Core B + Breathwork", tasks:[
         "─── GLUTE + QUAD LOWER BODY ───",
         "Activation: Glute Bridge 3×15 — squeeze hard.",
@@ -1058,9 +1001,7 @@ const WEEKS = {
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: supine position — lying on back like you will be at depth.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel balloon: supine position — lying on back like you will be at depth."]},
       Thu:{type:"dry", label:"Dry Static + NPSA + Visualisation", tasks:[
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale. 10 rounds. Start every breathwork session here.",
@@ -1073,7 +1014,6 @@ const WEEKS = {
         "Nose clip on. Frenzel balloon: 8 min. All positions. Mouthfill today.",
         "─── VISUALISATION ─── (5 min)",
         "45m. Focus on the mouthfill — where do you equalise for the last time? 30m? Build the mental map.",
-        "Camp check-ins.",
         "─── GLUTE ACTIVATION ───",
         "Glute Bridge 3×15 — lying flat, drive hips up, squeeze 2 sec at top.",
         "Clamshells 3×15 each side — external rotation only, pelvis still.",
@@ -1084,8 +1024,7 @@ const WEEKS = {
         "Seated Row 3×12 — band or dumbbell bent-over row, squeeze shoulder blades.",
         "Shoulder Press 3×12 — seated, full overhead, dumbbells.",
         "Bicep Curl 3×12 — alternate arms.",
-        "Tricep Overhead Extension 3×12 — seated, both hands on one dumbbell.",
-      ]},
+        "Tricep Overhead Extension 3×12 — seated, both hands on one dumbbell."]},
       Fri:{type:"strength", label:"Strength Core + Arms + Glute Endurance", tasks:[
         "─── UPPER BODY CORE + ARMS ─── (fasting day: moderate weight, form focus)",
         "Shoulder Press 3×12. Bicep Curl 3×12. Tricep Overhead Extension 3×12.",
@@ -1095,16 +1034,13 @@ const WEEKS = {
         "Hollow Hold 3×30 sec. Deadbugs 3×10 each side. Supermans 3×15. Plank Hold 2×40 sec.",
         "Ab Leg Raises 3×15. Lower Back Extensions 3×15 ← always last.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: exhaled position. Lungs empty. Push to ears.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel balloon: exhaled position. Lungs empty. Push to ears."]},
       Sat:{type:"shabbat", label:"Shabbat / On-call", tasks:[
         "Minimal footprint.",
         "─── BREATHWORK ───",
         "4 Section Breathing — 10 rounds.",
         "─── FRENZEL ─── (10 min)",
-        "Nose clip on. All positions. Log: can you equalise easily at every position?",
-      ]},
+        "Nose clip on. All positions. Log: can you equalise easily at every position?"]},
       Sun:{type:"pool", label:"Pool + Grocery + Glutes", tasks:[
         "Grocery shop + meal prep.",
         "─── POOL SESSION ─── (⚠ buddy required for breath hold sets)",
@@ -1114,9 +1050,7 @@ const WEEKS = {
         "Log: pulse after each 50m hold, any LMC — if yes, stop immediately.",
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel poolside.",
-        "Weekly reflection — Phase 2 strength block underway.",
-        "Camp check-ins.",
-      ]},
+        "Weekly reflection — Phase 2 strength block underway."]},
     }},
     { week:8, sessions:{
       Mon:{type:"strength", label:"Strength Upper ↑ + Glutes + Breathwork", tasks:[
@@ -1132,17 +1066,13 @@ const WEEKS = {
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: 5 min.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel balloon: 5 min."]},
       Tue:{type:"pool", label:"Pool Cardio", tasks:[
         "─── POOL SESSION ───",
         "1000m continuous freestyle — breathe every 8 strokes. Time it. Compare to Phase 1.",
         "Log: splits per 250m, stroke count per length.",
         "─── FRENZEL POOLSIDE ─── (5 min)",
-        "Nose clip on. Frenzel reps.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel reps."]},
       Wed:{type:"strength", label:"Strength Lower ↑ + Glutes + Core B + Breathwork", tasks:[
         "─── GLUTE + QUAD LOWER BODY ─── (5-10% heavier than Week 7)",
         "Romanian Deadlift 4×6 ↑ — heavier. Your kick depends on this.",
@@ -1157,7 +1087,6 @@ const WEEKS = {
         "4 sections. Full exhale.",
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel balloon: supine today.",
-        "Camp check-ins.",
         "─── GLUTE + HAMSTRING BLOCK A ─── (Sims: heavy load, low rep for women's strength)",
         "Romanian Deadlift 4×6 — HEAVY dumbbells. Hinge at hip, soft knee, feel hamstrings load at bottom. Drive hips forward to stand. This is your kick power.",
         "Single-Leg RDL 3×8 each side — balance on one leg, hinge forward, free leg tracks back. Load up.",
@@ -1184,7 +1113,6 @@ const WEEKS = {
         "Nose clip on. Frenzel balloon: 8 min. Today: mouthfill in supine position — hardest combination.",
         "─── VISUALISATION ─── (5 min)",
         "45m. Today: what does the water feel like at 30m? Denser. Darker. Quieter. Breathe into that.",
-        "Camp check-ins.",
         "─── GLUTE ACTIVATION ───",
         "Glute Bridge 3×15 — lying flat, drive hips up, squeeze 2 sec at top.",
         "Clamshells 3×15 each side — external rotation only, pelvis still.",
@@ -1195,8 +1123,7 @@ const WEEKS = {
         "Seated Row 3×12 — band or dumbbell bent-over row, squeeze shoulder blades.",
         "Shoulder Press 3×12 — seated, full overhead, dumbbells.",
         "Bicep Curl 3×12 — alternate arms.",
-        "Tricep Overhead Extension 3×12 — seated, both hands on one dumbbell.",
-      ]},
+        "Tricep Overhead Extension 3×12 — seated, both hands on one dumbbell."]},
       Fri:{type:"strength", label:"Strength Core ↑ + Glute Endurance", tasks:[
         "─── UPPER BODY + CORE ─── (fasting day)",
         "Shoulder Press 3×12. Bicep Curl 3×12. Tricep Extension 3×12.",
@@ -1208,16 +1135,13 @@ const WEEKS = {
         "Hollow Hold 3×35 sec. Deadbugs 3×10 each side. Supermans 3×15. Plank Hold 2×45 sec.",
         "Lower Back Extensions 3×15 ← always last.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: exhaled position.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel balloon: exhaled position."]},
       Sat:{type:"shabbat", label:"Shabbat / On-call", tasks:[
         "Minimal footprint.",
         "─── BREATHWORK ───",
         "4 Section Breathing — 10 rounds.",
         "─── FRENZEL ─── (10 min)",
-        "Nose clip on. All positions. Focus: can you equalise with lungs full and mouth closed?",
-      ]},
+        "Nose clip on. All positions. Focus: can you equalise with lungs full and mouth closed?"]},
       Sun:{type:"pool", label:"Pool + Grocery", tasks:[
         "Grocery shop + meal prep.",
         "─── POOL SESSION ─── (⚠ buddy required)",
@@ -1227,9 +1151,7 @@ const WEEKS = {
         "Log: pulse after each hold, total underwater distance.",
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel poolside.",
-        "Weekly reflection — strength progression noted?",
-        "Camp check-ins.",
-      ]},
+        "Weekly reflection — strength progression noted?"]},
     }},
     { week:9, sessions:{
       Mon:{type:"strength", label:"Apnea Strength Upper + Breathwork", tasks:[
@@ -1249,9 +1171,7 @@ const WEEKS = {
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale. Essential after breath hold sets.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: 5 min.",
-        "Camp check-ins.",
-      ], note:"Apnea strength: holding breath during reps recreates CO2 and lactic acid buildup you feel at depth. Learn to stay relaxed under that pressure."},
+        "Nose clip on. Frenzel balloon: 5 min."], note:"Apnea strength: holding breath during reps recreates CO2 and lactic acid buildup you feel at depth. Learn to stay relaxed under that pressure."},
       Tue:{type:"pool", label:"Pool CO2 Tolerance", tasks:[
         "─── POOL SESSION ─── (⚠ buddy required)",
         "400m warm-up.",
@@ -1259,9 +1179,7 @@ const WEEKS = {
         "300m cool-down.",
         "Log: pulse after every hold. Note when you felt the urge to surface — sooner or later than last week?",
         "─── FRENZEL POOLSIDE ─── (5 min)",
-        "Nose clip on. Frenzel reps.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel reps."]},
       Wed:{type:"strength", label:"Apnea Strength Lower + Glutes + Core B + Breathwork", tasks:[
         "─── APNEA STRENGTH LOWER ─── (alternate breath hold / normal sets)",
         "Romanian Deadlift — alternate hold / normal × 4 sets of 6. Heavy.",
@@ -1276,7 +1194,6 @@ const WEEKS = {
         "4 sections. Full exhale. After apnea strength — you need this.",
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel balloon: supine + mouthfill today.",
-        "Camp check-ins.",
         "─── GLUTE + HAMSTRING BLOCK A ─── (Sims: heavy load, low rep for women's strength)",
         "Romanian Deadlift 4×6 — HEAVY dumbbells. Hinge at hip, soft knee, feel hamstrings load at bottom. Drive hips forward to stand. This is your kick power.",
         "Single-Leg RDL 3×8 each side — balance on one leg, hinge forward, free leg tracks back. Load up.",
@@ -1305,7 +1222,6 @@ const WEEKS = {
         "Nose clip on. Frenzel balloon: 8 min. Equalise as you exhale — practise thinning the air in mouth.",
         "─── VISUALISATION ─── (5 min)",
         "45m. Contractions arrive at 25m. You feel them and stay calm. You keep descending. They are safe.",
-        "Camp check-ins.",
         "─── GLUTE ACTIVATION ───",
         "Glute Bridge 3×15 — lying flat, drive hips up, squeeze 2 sec at top.",
         "Clamshells 3×15 each side — external rotation only, pelvis still.",
@@ -1316,8 +1232,7 @@ const WEEKS = {
         "Seated Row 3×12 — band or dumbbell bent-over row, squeeze shoulder blades.",
         "Shoulder Press 3×12 — seated, full overhead, dumbbells.",
         "Bicep Curl 3×12 — alternate arms.",
-        "Tricep Overhead Extension 3×12 — seated, both hands on one dumbbell.",
-      ]},
+        "Tricep Overhead Extension 3×12 — seated, both hands on one dumbbell."]},
       Fri:{type:"strength", label:"Apnea Strength Full + Glute Endurance", tasks:[
         "─── APNEA STRENGTH FULL CIRCUIT ─── (fasting day: moderate load, breath hold sets)",
         "Shoulder Press — hold / normal × 3 sets. Bicep Curl — hold / normal × 3 sets.",
@@ -1329,16 +1244,13 @@ const WEEKS = {
         "Hollow Hold 3×35 sec. Deadbugs 3×10 each side. Supermans 3×15. Plank Hold 2×45 sec.",
         "Lower Back Extensions 3×15 ← always last.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: exhaled position.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel balloon: exhaled position."]},
       Sat:{type:"shabbat", label:"Shabbat / On-call", tasks:[
         "Minimal footprint.",
         "─── BREATHWORK ───",
         "4 Section Breathing — 10 rounds.",
         "─── FRENZEL ─── (10 min)",
-        "Nose clip on. All positions. Are you maintaining equalisation through entire descent sequence in your mind?",
-      ]},
+        "Nose clip on. All positions. Are you maintaining equalisation through entire descent sequence in your mind?"]},
       Sun:{type:"pool", label:"Pool Peak + Grocery", tasks:[
         "Grocery shop + meal prep.",
         "─── POOL SESSION ─── (⚠ buddy required)",
@@ -1348,9 +1260,7 @@ const WEEKS = {
         "Log: pulse after every hold, any LMC, how the final holds felt vs the first.",
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel poolside.",
-        "Weekly reflection — contractions feeling more manageable?",
-        "Camp check-ins.",
-      ]},
+        "Weekly reflection — contractions feeling more manageable?"]},
     }},
     { week:10, sessions:{
       Mon:{type:"strength", label:"Apnea Strength Upper ↑ + Breathwork", tasks:[
@@ -1369,9 +1279,7 @@ const WEEKS = {
         "─── 4 SECTION BREATHING ─── (10 rounds)",
         "4 sections. Full exhale.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: 5 min.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel balloon: 5 min."]},
       Tue:{type:"pool", label:"Pool CO2 Shorter Rest", tasks:[
         "─── POOL SESSION ─── (⚠ buddy required)",
         "300m warm-up.",
@@ -1379,9 +1287,7 @@ const WEEKS = {
         "300m cool-down.",
         "Log: pulse after every hold. Shorter rest = key CO2 adaptation this week.",
         "─── FRENZEL POOLSIDE ─── (5 min)",
-        "Nose clip on. Frenzel reps.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel reps."]},
       Wed:{type:"strength", label:"Apnea Strength Lower ↑ + Glutes + Core B + Breathwork", tasks:[
         "─── APNEA STRENGTH LOWER ─── (10% heavier — all sets with breath hold)",
         "Romanian Deadlift 4×6 — ALL with breath hold. 10% heavier than Week 9.",
@@ -1397,7 +1303,6 @@ const WEEKS = {
         "4 sections. Full exhale.",
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel balloon: mouthfill supine today.",
-        "Camp check-ins.",
         "─── GLUTE + HAMSTRING BLOCK A ─── (Sims: heavy load, low rep for women's strength)",
         "Romanian Deadlift 4×6 — HEAVY dumbbells. Hinge at hip, soft knee, feel hamstrings load at bottom. Drive hips forward to stand. This is your kick power.",
         "Single-Leg RDL 3×8 each side — balance on one leg, hinge forward, free leg tracks back. Load up.",
@@ -1425,7 +1330,6 @@ const WEEKS = {
         "Nose clip on. Frenzel balloon: 8 min. Final Phase 2 Frenzel check — every position, including exhaled?",
         "─── VISUALISATION ─── (5 min)",
         "45m. Full descent, turn, ascent. Does the sequence feel familiar now? It should.",
-        "Camp check-ins.",
         "─── GLUTE ACTIVATION ───",
         "Glute Bridge 3×15 — lying flat, drive hips up, squeeze 2 sec at top.",
         "Clamshells 3×15 each side — external rotation only, pelvis still.",
@@ -1436,8 +1340,7 @@ const WEEKS = {
         "Seated Row 3×12 — band or dumbbell bent-over row, squeeze shoulder blades.",
         "Shoulder Press 3×12 — seated, full overhead, dumbbells.",
         "Bicep Curl 3×12 — alternate arms.",
-        "Tricep Overhead Extension 3×12 — seated, both hands on one dumbbell.",
-      ]},
+        "Tricep Overhead Extension 3×12 — seated, both hands on one dumbbell."]},
       Fri:{type:"strength", label:"Apnea Strength Full ↑ + Glute Endurance", tasks:[
         "─── APNEA STRENGTH FULL CIRCUIT ─── (fasting day — full breath hold all sets)",
         "Shoulder Press — ALL sets with breath hold. Bicep Curl — ALL sets. Tricep Extension — ALL sets.",
@@ -1448,16 +1351,13 @@ const WEEKS = {
         "Hollow Hold 3×40 sec. Deadbugs 3×10 each side. Supermans 3×15. Plank Hold 2×45 sec.",
         "Lower Back Extensions 3×15 ← always last.",
         "─── FRENZEL ─── (5 min)",
-        "Nose clip on. Frenzel balloon: exhaled position. Log final Phase 2 Frenzel assessment.",
-        "Camp check-ins.",
-      ]},
+        "Nose clip on. Frenzel balloon: exhaled position. Log final Phase 2 Frenzel assessment."]},
       Sat:{type:"shabbat", label:"Shabbat / On-call", tasks:[
         "Minimal footprint.",
         "─── BREATHWORK ───",
         "4 Section Breathing — 10 rounds.",
         "─── FRENZEL ─── (10 min)",
-        "Nose clip on. All positions. Phase 2 final Frenzel review — log confidence 1-10 each position.",
-      ]},
+        "Nose clip on. All positions. Phase 2 final Frenzel review — log confidence 1-10 each position."]},
       Sun:{type:"pool", label:"Pool Peak + Grocery", tasks:[
         "Grocery shop + meal prep.",
         "─── POOL SESSION ─── (⚠ buddy required — peak Phase 2 volume)",
@@ -1467,11 +1367,8 @@ const WEEKS = {
         "Log: pulse after every hold. Note the pattern — when does pulse spike?",
         "─── FRENZEL ─── (5 min)",
         "Nose clip on. Frenzel poolside.",
-        "Weekly reflection — Phase 2 complete. Strength, CO2 tolerance, equalisation — assess all three.",
-        "Camp check-ins.",
-      ]},
-    }},
-  ],
+        "Weekly reflection — Phase 2 complete. Strength, CO2 tolerance, equalisation — assess all three."]},
+    }}],
   phase3: [
     { week:11, sessions:{
       // WEEK 11: Aug 9-15 — MENSTRUAL PHASE (day 1-7)
@@ -1510,8 +1407,7 @@ const WEEKS = {
         "─── IRON PROTOCOL — DAY 1 ───",
         "Start iron-rich foods from today: red meat, lentils, dark leafy greens + vitamin C. Critical for oxygen-carrying capacity at depth.",
         "Magnesium foods: dark chocolate, pumpkin seeds. Supports recovery and reduces cramping.",
-        "Hydrate more than usual — body temperature is elevated all week.",
-      ], note:"Menstrual phase W11 Mon. 80% effort only. Frenzel and breathwork are your primary training tools this week — your parasympathetic access is exceptional right now."},
+        "Hydrate more than usual — body temperature is elevated all week."], note:"Menstrual phase W11 Mon. 80% effort only. Frenzel and breathwork are your primary training tools this week — your parasympathetic access is exceptional right now."},
 
       Tue:{type:"pool", label:"Menstrual W1 — Pool Technique (Extended Rest)", tasks:[
         "⚠ MENSTRUAL PHASE — Pool session continues. Reduce CO2 stress this week. Focus on technique and water feel.",
@@ -1526,8 +1422,7 @@ const WEEKS = {
         "─── FRENZEL POOLSIDE ─── (8 min)",
         "Nose clip on. Frenzel: 8 min. Ears are warm. Use the menstrual parasympathetic window.",
         "─── IRON + HYDRATION REMINDER ───",
-        "Iron-rich meal tonight. Hydrate well post-pool. You are losing iron during menstruation.",
-      ], note:"Menstrual W11 Tue. Extended surface intervals — no short-rest CO2 stress this week. Quality technique over volume."},
+        "Iron-rich meal tonight. Hydrate well post-pool. You are losing iron during menstruation."], note:"Menstrual W11 Tue. Extended surface intervals — no short-rest CO2 stress this week. Quality technique over volume."},
 
       Wed:{type:"strength", label:"Menstrual W1 — Breathwork + Light Strength + Core B", tasks:[
         "⚠ MENSTRUAL PHASE — Strength session continues at reduced load. Neuromuscular recruitment is slightly reduced this week.",
@@ -1550,8 +1445,7 @@ const WEEKS = {
         "─── NPSA ON LAND ─── (2×90 sec)",
         "Exhale, close. Hold 90 sec. 2 rounds. Gentle.",
         "─── IRON + NUTRITION ───",
-        "Lentil soup or red meat tonight. Vitamin C with iron-rich foods.",
-      ], note:"Menstrual W11 Wed. Moderate load throughout. The week after next (follicular) is your heaviest training week — this week feeds that."},
+        "Lentil soup or red meat tonight. Vitamin C with iron-rich foods."], note:"Menstrual W11 Wed. Moderate load throughout. The week after next (follicular) is your heaviest training week — this week feeds that."},
 
       Thu:{type:"rest", label:"Menstrual W1 — Rest + Breathwork + Frenzel + Mobility", tasks:[
         "Full training rest — especially important during menstruation. Your body is rebuilding.",
@@ -1572,8 +1466,7 @@ const WEEKS = {
         "45m descent. Full sequence. Slow. You have time today. Feel the water at every depth marker: 10m, 20m, 30m, 40m, 45m turn, ascent, surface.",
         "─── IRON + SLEEP ───",
         "Iron-rich dinner. Sleep 8-9 hrs tonight — menstrual phase sleep quality is critical.",
-        "Magnesium supplement or dark chocolate before bed if available.",
-      ], note:"Menstrual W11 Thu. This rest day is the most physiologically productive session of week 11. The breathwork and Frenzel gains made today will still be present on Sep 8."},
+        "Magnesium supplement or dark chocolate before bed if available."], note:"Menstrual W11 Thu. This rest day is the most physiologically productive session of week 11. The breathwork and Frenzel gains made today will still be present on Sep 8."},
 
       Fri:{type:"pool", label:"Menstrual W1 — Pool Easy + Glute Endurance + Core C", tasks:[
         "⚠ MENSTRUAL PHASE + FASTING DAY — Gentle today. Two reasons to keep intensity low.",
@@ -1591,11 +1484,10 @@ const WEEKS = {
         "Hollow Hold 3×20 sec. Deadbugs 3×8 each side. Supermans 3×12. Plank Hold 2×25 sec.",
         "Lower Back Extensions 3×15 ← always last.",
         "─── IRON + HYDRATION ───",
-        "Despite fasting, ensure iron-rich meal tonight breaking the fast. Hydrate well all day.",
-      ], note:"Menstrual W11 Fri. Two reasons to be gentle: fasting day AND menstruation. This is the right call — the hard work happens next week in follicular."},
+        "Despite fasting, ensure iron-rich meal tonight breaking the fast. Hydrate well all day."], note:"Menstrual W11 Fri. Two reasons to be gentle: fasting day AND menstruation. This is the right call — the hard work happens next week in follicular."},
 
       Sat:{type:"shabbat", label:"Menstrual W1 — Deep Rest + Frenzel + Nutrition", tasks:[
-        "Full rest. Minimal footprint. Available for camp if needed.",
+        "Full rest.",
         "─── BREATHWORK ───",
         "4 Section Breathing — 12 rounds. Slow. Use the menstrual quiet.",
         "─── GLUTE + HIP MOBILITY ───",
@@ -1604,18 +1496,14 @@ const WEEKS = {
         "Nose clip on. Frenzel balloon: 12 min. All positions. The menstrual window for parasympathetic work closes tomorrow as follicular begins — use it.",
         "─── VISUALISATION ─── (10 min)",
         "40m descent. See September 8. See yourself at the surface after. See it clearly.",
-        "─── END OF CAMP SEASON — FINAL CHECKS ───",
-        "Complete any outstanding Moorlands admin before camp closes.",
-        "Confirm no outstanding payments, invoices, or SOP entries.",
+        
         "─── NUTRITION TODAY ───",
         "Iron-rich meal: steak or lentils with spinach and lemon juice. Vitamin C doubles iron absorption.",
-        "Stay well hydrated. Rest as much as possible.",
-      ]},
+        "Stay well hydrated. Rest as much as possible."]},
 
-      Sun:{type:"pool", label:"Menstrual W1 — Pool Distance + Grocery + End of Camp", tasks:[
+      Sun:{type:"pool", label:"Menstrual W1 — Pool Distance + Grocery", tasks:[
         "Grocery shop — focus on iron-rich foods for the week: red meat, lentils, spinach, dark chocolate, pumpkin seeds.",
-        "─── END OF CAMP SEASON ───",
-        "Last camp Sunday. Complete turnaround checklist. Hand over properly. This burden lifts from Monday.",
+        
         "─── POOL SESSION — DISTANCE + FEEL ─── (⚠ buddy required)",
         "500m easy warm-up.",
         "3×75m breath hold underwater — 3 min surface interval. Longer rest — menstrual phase.",
@@ -1624,8 +1512,7 @@ const WEEKS = {
         "Log: how the long holds feel. You are 3 weeks from the attempt.",
         "─── IN-WATER FRENZEL ─── (8 min poolside)",
         "Nose clip on. Frenzel poolside: head tilted back, equalise as if descending. Log both ears.",
-        "Weekly reflection — this was your menstrual week. What breathwork breakthroughs happened? What Frenzel progress?",
-      ]},
+        "Weekly reflection — this was your menstrual week. What breathwork breakthroughs happened? What Frenzel progress?"]},
     }},
 
     { week:12, sessions:{
@@ -1665,8 +1552,7 @@ const WEEKS = {
         "─── FRENZEL PRACTICE ─── (5 min)",
         "Nose clip on. Frenzel balloon: 5 min. Mouthfill focus today.",
         "─── VISUALISATION ─── (5 min)",
-        "40m descent. This is your target. See the turn clearly.",
-      ], note:"Week 12 Mon = heaviest session of the programme. Follicular oestrogen peaks neuromuscular adaptation. The strength you build today is still present on Sep 8."},
+        "40m descent. This is your target. See the turn clearly."], note:"Week 12 Mon = heaviest session of the programme. Follicular oestrogen peaks neuromuscular adaptation. The strength you build today is still present on Sep 8."},
 
       Tue:{type:"pool", label:"Follicular — Pool High Frequency CO2", tasks:[
         "🌱 FOLLICULAR — Push CO2 tolerance hard today. Your body adapts fastest this week.",
@@ -1678,8 +1564,7 @@ const WEEKS = {
         "─── GLUTE ENDURANCE ─── (poolside)",
         "Single-Leg Glute Bridge 3×15 each side. Sumo Squat Pulse 3×20. Fire Hydrants 3×15 each side.",
         "─── FRENZEL POOLSIDE ─── (8 min)",
-        "Nose clip on. Frenzel: 8 min. Ears are warm. Push into harder positions today.",
-      ], note:"Follicular W12 Tue. Hardest CO2 session. 15×25m at 45 sec rest. Your CO2 tolerance adaptation is fastest this week."},
+        "Nose clip on. Frenzel: 8 min. Ears are warm. Push into harder positions today."], note:"Follicular W12 Tue. Hardest CO2 session. 15×25m at 45 sec rest. Your CO2 tolerance adaptation is fastest this week."},
 
       Wed:{type:"strength", label:"Follicular — HEAVY Glutes (Lower Body) + Core B + Breathwork", tasks:[
         "🌱 FOLLICULAR — Lower body heavy day. Go heavier than any previous Wednesday.",
@@ -1707,8 +1592,7 @@ const WEEKS = {
         "─── FRENZEL PRACTICE ─── (8 min)",
         "Nose clip on. Frenzel balloon: 8 min. Mouthfill supine — hardest combination. This week your gains are fastest.",
         "─── VISUALISATION ─── (5 min)",
-        "40m. The turn. The ascent. The surface. Clear.",
-      ], note:"Follicular W12 Wed. Heaviest lower body session. Everything you build here is banked for Sep 8."},
+        "40m. The turn. The ascent. The surface. Clear."], note:"Follicular W12 Wed. Heaviest lower body session. Everything you build here is banked for Sep 8."},
 
       Thu:{type:"rest", label:"Follicular — Active Recovery + Deep Breathwork + Frenzel PR", tasks:[
         "Active recovery — you need it after the heaviest training days.",
@@ -1727,8 +1611,7 @@ const WEEKS = {
         "Nose clip on. Frenzel balloon: 15 min. All positions. Push into harder positions you've been avoiding.",
         "Upright → exhaled → mouthfill → supine → inverted. Log confidence 1-10 each position.",
         "─── VISUALISATION ─── (10 min)",
-        "40m. See the line. See the plate at the bottom. See your hand on it. See the turn. Ascent. Surface.",
-      ], note:"Follicular W12 Thu rest day = best static PR window of the programme. Your neuromuscular system is at peak efficiency. The holds you achieve today tell you where you truly are."},
+        "40m. See the line. See the plate at the bottom. See your hand on it. See the turn. Ascent. Surface."], note:"Follicular W12 Thu rest day = best static PR window of the programme. Your neuromuscular system is at peak efficiency. The holds you achieve today tell you where you truly are."},
 
       Fri:{type:"pool", label:"Follicular — Pool Mixed Apnea + Glute Endurance + Core C", tasks:[
         "🌱 FOLLICULAR — One of your best pool days of the programme.",
@@ -1745,8 +1628,7 @@ const WEEKS = {
         "─── FRENZEL PRACTICE ─── (8 min)",
         "Nose clip on. Frenzel: exhaled position. Log: can you equalise with lungs fully empty? This is the 40m skill.",
         "─── VISUALISATION ─── (5 min)",
-        "40m. Full sequence. Feeling strong. Feeling ready.",
-      ]},
+        "40m. Full sequence. Feeling strong. Feeling ready."]},
 
       Sat:{type:"shabbat", label:"Follicular — Rest + Frenzel + Nutrition", tasks:[
         "Minimal footprint. Rest and absorb this week's training.",
@@ -1757,8 +1639,7 @@ const WEEKS = {
         "─── VISUALISATION ─── (10 min)",
         "40m. This is becoming familiar. Good.",
         "─── NUTRITION THIS WEEK ───",
-        "Follicular: fresh greens, eggs, fermented foods, seeds. Oestrogen supports muscle protein synthesis — prioritise protein this week.",
-      ]},
+        "Follicular: fresh greens, eggs, fermented foods, seeds. Oestrogen supports muscle protein synthesis — prioritise protein this week."]},
 
       Sun:{type:"pool", label:"Follicular — Pool Peak Volume + Grocery", tasks:[
         "Grocery shop — follicular foods: eggs, leafy greens, seeds, lean protein, fermented foods.",
@@ -1769,8 +1650,7 @@ const WEEKS = {
         "300m cool-down.",
         "─── FRENZEL POOLSIDE ─── (8 min)",
         "Nose clip on. Frenzel poolside. Both ears clean?",
-        "Weekly reflection — Week 12 was the heaviest training week of the programme. What was your static PR? What was your longest pool hold? These are your benchmarks.",
-      ]},
+        "Weekly reflection — Week 12 was the heaviest training week of the programme. What was your static PR? What was your longest pool hold? These are your benchmarks."]},
     }},
 
     { week:13, sessions:{
@@ -1801,8 +1681,7 @@ const WEEKS = {
         "─── FRENZEL PRACTICE ─── (8 min)",
         "Nose clip on. Frenzel balloon: 8 min. You are 2 weeks from the attempt. Every session is direct prep.",
         "─── VISUALISATION ─── (8 min)",
-        "40m. Full sequence. Duck dive. Freefall. The plate at the bottom. Turn. Ascent. You are there.",
-      ]},
+        "40m. Full sequence. Duck dive. Freefall. The plate at the bottom. Turn. Ascent. You are there."]},
 
       Tue:{type:"pool", label:"🔥 OVULATORY WINDOW — Fins + Race Simulation (Aug 25-27)", tasks:[
         "🔥 OVULATORY WINDOW (AUG 25-27) — This is your peak power and coordination window. Do your race simulation session today or Wednesday.",
@@ -1820,8 +1699,7 @@ const WEEKS = {
         "─── FRENZEL POOLSIDE ─── (8 min)",
         "Nose clip on. Frenzel: 8 min. You are at your best. The skill will stick.",
         "─── VISUALISATION ─── (8 min)",
-        "40m. The plate. Your hand on it. This is real.",
-      ], note:"OVULATORY WINDOW — peak coordination and power. Race simulation here = best data of the programme for Sep 8."},
+        "40m. The plate. Your hand on it. This is real."], note:"OVULATORY WINDOW — peak coordination and power. Race simulation here = best data of the programme for Sep 8."},
 
       Wed:{type:"strength", label:"Early Luteal Transition — Heavy Glutes + Core B + Breathwork", tasks:[
         "🍂 EARLY LUTEAL (AUG 28) — progesterone beginning to rise. You may still feel strong today.",
@@ -1849,8 +1727,7 @@ const WEEKS = {
         "─── FRENZEL PRACTICE ─── (8 min)",
         "Nose clip on. Frenzel balloon: 8 min. All positions.",
         "─── VISUALISATION ─── (8 min)",
-        "40m. Full sequence. Contractions arrive — you stay calm. You keep descending.",
-      ]},
+        "40m. Full sequence. Contractions arrive — you stay calm. You keep descending."]},
 
       Thu:{type:"rest", label:"Luteal — Rest + Deep Breathwork + Frenzel Consolidation", tasks:[
         "🍂 LUTEAL — Full training rest. This is no longer about building. It is about consolidating.",
@@ -1870,8 +1747,7 @@ const WEEKS = {
         "─── LUTEAL NUTRITION BEGINS ───",
         "Complex carbs: oats, sweet potato, brown rice. Magnesium: dark chocolate, pumpkin seeds.",
         "Reduce refined sugar — amplifies PMS-related inflammation.",
-        "Increase anti-inflammatory foods: turmeric, fatty fish, leafy greens.",
-      ], note:"Luteal W13 Thu. The building is done. This session consolidates skill, not fitness."},
+        "Increase anti-inflammatory foods: turmeric, fatty fish, leafy greens."], note:"Luteal W13 Thu. The building is done. This session consolidates skill, not fitness."},
 
       Fri:{type:"pool", label:"Luteal — Pool Distance + Glute Endurance + Core C", tasks:[
         "🍂 LUTEAL + FASTING DAY — Double reason to keep intensity moderate. Trust the training.",
@@ -1888,8 +1764,7 @@ const WEEKS = {
         "Hollow Hold 3×30 sec. Deadbugs 3×10 each side. Supermans 3×15. Plank Hold 2×40 sec.",
         "Lower Back Extensions 3×15 ← always last.",
         "─── LUTEAL NUTRITION ───",
-        "Break fast tonight with: complex carbs + protein + magnesium-rich foods. No refined sugar.",
-      ]},
+        "Break fast tonight with: complex carbs + protein + magnesium-rich foods. No refined sugar."]},
 
       Sat:{type:"shabbat", label:"Luteal — Deep Rest + Frenzel + Visualisation", tasks:[
         "Minimal footprint. Full rest from training.",
@@ -1900,8 +1775,7 @@ const WEEKS = {
         "─── VISUALISATION ─── (12 min — longer today)",
         "40m. Run through it 4 times. Each time slightly different detail: depth, the silence, the colour of the water, the feel of the plate.",
         "─── NUTRITION ───",
-        "Magnesium-rich dinner. Sleep 9 hrs if possible. Luteal phase sleep is the most critical recovery tool you have.",
-      ]},
+        "Magnesium-rich dinner. Sleep 9 hrs if possible. Luteal phase sleep is the most critical recovery tool you have."]},
 
       Sun:{type:"pool", label:"Luteal — Pool Peak + Grocery", tasks:[
         "Grocery shop — luteal foods: complex carbs, oats, sweet potato, magnesium foods, fatty fish, dark chocolate.",
@@ -1912,8 +1786,7 @@ const WEEKS = {
         "Log: pulse after each hold. Compare to Week 11 Sunday — the improvement should be visible.",
         "─── FRENZEL POOLSIDE ─── (8 min)",
         "Nose clip on. Frenzel poolside. Head back. Log: how automatic does this feel now?",
-        "Weekly reflection — Week 13 done. You have 10 days until the attempt. The work is complete. What you built in weeks 12-13 is banked.",
-      ]},
+        "Weekly reflection — Week 13 done. You have 10 days until the attempt. The work is complete. What you built in weeks 12-13 is banked."]},
     }},
 
     { week:14, sessions:{
@@ -1940,8 +1813,7 @@ const WEEKS = {
         "─── FRENZEL PRACTICE ─── (8 min)",
         "Nose clip on. Frenzel balloon: 8 min. Gentle, automatic. Trust it.",
         "─── VISUALISATION ─── (10 min)",
-        "40m. Run through it twice. Slow. Familiar. Certain.",
-      ], note:"Taper Mon. Volume drops 60%. Trust 14 weeks of work."},
+        "40m. Run through it twice. Slow. Familiar. Certain."], note:"Taper Mon. Volume drops 60%. Trust 14 weeks of work."},
 
       Tue:{type:"pool", label:"Taper — Pool Technique Only", tasks:[
         "TAPER — Aug 31. Last real pool session before the rest block. Technique only. No effort.",
@@ -1953,8 +1825,7 @@ const WEEKS = {
         "─── FRENZEL POOLSIDE ─── (10 min)",
         "Nose clip on. Frenzel: 10 min. Both ears equalising cleanly at every position?",
         "─── VISUALISATION ─── (8 min)",
-        "40m. The line down. Your hand on the plate. Ascent. Surface. Breathe. Done.",
-      ], note:"Last pool session before the rest block. Technique only. No effort."},
+        "40m. The line down. Your hand on the plate. Ascent. Surface. Breathe. Done."], note:"Last pool session before the rest block. Technique only. No effort."},
 
       Wed:{type:"rest", label:"🏕 CAMP ENDS — Full Rest Day 1 (Sep 1)", tasks:[
         "🏕 CAMP IS OVER. The 24/7 on-call ends today. This is the beginning of the most important 7 days of your training.",
@@ -1973,8 +1844,7 @@ const WEEKS = {
         "No alcohol. No refined sugar. No inflammatory foods this week.",
         "Sleep: 9 hrs minimum tonight.",
         "─── VISUALISATION ─── (10 min — when rested)",
-        "40m. Slow. Certain. You know this water.",
-      ], note:"Sep 1 — Camp ends. Full rest. Sleep. This rest block is your final and most important training tool."},
+        "40m. Slow. Certain. You know this water."], note:"Sep 1 — Camp ends. Full rest. Sleep. This rest block is your final and most important training tool."},
 
       Thu:{type:"rest", label:"Full Rest Day 2 (Sep 2)", tasks:[
         "FULL REST — Sep 2.",
@@ -1996,8 +1866,7 @@ const WEEKS = {
         "Iron-rich lunch and dinner.",
         "Anti-inflammatory foods: turmeric, fatty fish, leafy greens.",
         "Hydrate consistently. Dehydration reduces breath hold time measurably.",
-        "No alcohol. No sugar.",
-      ], note:"Sep 2 rest day. Sleep is training. Frenzel and visualisation are your best tools today."},
+        "No alcohol. No sugar."], note:"Sep 2 rest day. Sleep is training. Frenzel and visualisation are your best tools today."},
 
       Fri:{type:"rest", label:"Full Rest Day 3 + Final Sharpener (Sep 3)", tasks:[
         "NEAR-FULL REST — Sep 3.",
@@ -2019,8 +1888,7 @@ const WEEKS = {
         "─── NUTRITION ───",
         "Complex carbs tonight: sweet potato, brown rice, oats. Begin gentle carb-loading.",
         "Iron-rich meal. Protein. Magnesium.",
-        "No alcohol. No inflammatory foods.",
-      ], note:"Sep 3. One breathwork hold, one walk, rest, Frenzel, visualisation. The work is done."},
+        "No alcohol. No inflammatory foods."], note:"Sep 3. One breathwork hold, one walk, rest, Frenzel, visualisation. The work is done."},
 
       Sat:{type:"rest", label:"Final Rest Day — The Eve (Sep 4 or Sep 7)", tasks:[
         "COMPLETE REST — Sep 4 (and Sep 7 if doing further prep).",
@@ -2041,8 +1909,7 @@ const WEEKS = {
         "Hydrate: 2-3 litres water today. This is your single most impactful physiological preparation.",
         "─── SLEEP PROTOCOL ───",
         "No screens after 8pm. Dim lights. Magnesium supplement or dark chocolate.",
-        "If you cannot sleep, this is normal. Rest is enough. The body knows what to do.",
-      ], note:"Sep 4. Complete rest. Sleep. Hydrate. This is the final preparation. Everything else is done."},
+        "If you cannot sleep, this is normal. Rest is enough. The body knows what to do."], note:"Sep 4. Complete rest. Sleep. Hydrate. This is the final preparation. Everything else is done."},
 
       Sun:{type:"pool", label:"🎯 ATTEMPT DAY — September 8", tasks:[
         "🎯 40 METRE ATTEMPT — September 8.",
@@ -2074,8 +1941,7 @@ const WEEKS = {
         "Rest completely after — at least 1 hr horizontal.",
         "Eat a full iron-rich meal. You have earned the celebration meal 🎉",
         "Log everything: depth confirmed, time, contractions felt, how the turn felt, how the surface felt.",
-        "Weekly reflection: this is what 14 weeks of work looks like.",
-      ], note:"September 8, 2026. Your attempt. Everything in this programme was preparation for this moment. Trust the work."},
+        "Weekly reflection: this is what 14 weeks of work looks like."], note:"September 8, 2026. Your attempt. Everything in this programme was preparation for this moment. Trust the work."},
     }},
 
 };
@@ -2102,23 +1968,20 @@ const CAMP_MORNING = [
   { id:"kitchen_am", text:"Check in with kitchen staff — meals on schedule" },
   { id:"medicine",   text:"Check Medicine Chest", critical:true },
   { id:"emails_am",  text:"Check emails — reply to bookings" },
-  { id:"nastasia",   text:"Check in with Nastasia — payments, invoices" },
-];
+  { id:"nastasia",   text:"Check in with Nastasia — payments, invoices" }];
 
 const CAMP_MIDDAY = [
   { id:"water_mid",   text:"✅ Confirm water supply — midday check", critical:true },
   { id:"commandants", text:"Walkthrough — check in with Commandants" },
   { id:"tuck_restock",text:"Tuck Shop: restock, verify tuck sheets" },
-  { id:"activities",  text:"Confirm afternoon activities have equipment" },
-];
+  { id:"activities",  text:"Confirm afternoon activities have equipment" }];
 
 const CAMP_EVENING = [
   { id:"final_walk",  text:"Final site walkthrough — secure buildings" },
   { id:"campers",     text:"Confirm all campers accounted for and settled" },
   { id:"kitchen_pm",  text:"Brief kitchen staff on tomorrow's menu" },
   { id:"emails_pm",   text:"Check emails — respond to bookings" },
-  { id:"payment_bld", text:"Confirm Friday payment list building with Nastasia" },
-];
+  { id:"payment_bld", text:"Confirm Friday payment list building with Nastasia" }];
 
 const CAMP_WEEKLY = {
   Sun:{ label:"Sunday — Session Opens", items:[
@@ -2126,33 +1989,27 @@ const CAMP_WEEKLY = {
     { id:"w_sun_cmds",  text:"Orient Commandants — emergency procedures, Medicine Chest", critical:true },
     { id:"w_sun_tuck",  text:"Open Tuck Shop — verify opening stock" },
     { id:"w_sun_reg",   text:"Confirm online registration complete", critical:true },
-    { id:"w_sun_faith", text:"Verify Statement of Faith and rules compliance", critical:true },
-  ]},
+    { id:"w_sun_faith", text:"Verify Statement of Faith and rules compliance", critical:true }]},
   Mon:{ label:"Monday", items:[
     { id:"w_mon_tuck",  text:"Tuck sheets: review balances, flag discrepancies" },
-    { id:"w_mon_book",  text:"Follow up on pending bookings" },
-  ]},
+    { id:"w_mon_book",  text:"Follow up on pending bookings" }]},
   Tue:{ label:"Tuesday", items:[
     { id:"w_tue_stock", text:"Check stock levels — order for incoming session" },
-    { id:"w_tue_reg",   text:"Confirm next session registration — Statement of Faith?", critical:true },
-  ]},
+    { id:"w_tue_reg",   text:"Confirm next session registration — Statement of Faith?", critical:true }]},
   Wed:{ label:"Wednesday", items:[
     { id:"w_wed_maint", text:"Mid-week site inspection" },
-    { id:"w_wed_grnd",  text:"Check in with Groundsman on maintenance" },
-  ]},
+    { id:"w_wed_grnd",  text:"Check in with Groundsman on maintenance" }]},
   Thu:{ label:"Thursday — Pre-Turnover Prep", items:[
     { id:"w_thu_tuck",  text:"Begin tuck shop reconciliation" },
     { id:"w_thu_clean", text:"Confirm cleaners scheduled for Saturday", critical:true },
     { id:"w_thu_pay",   text:"Prepare Friday payment list with Nastasia", critical:true },
-    { id:"w_thu_in",    text:"Confirm incoming group arrival time + headcount" },
-  ]},
+    { id:"w_thu_in",    text:"Confirm incoming group arrival time + headcount" }]},
   Fri:{ label:"Friday — Payments", items:[
     { id:"w_fri_auth",  text:"Review and authorise all bank transfers", critical:true },
     { id:"w_fri_rcpt",  text:"Confirm all receipts/invoices through office first", critical:true },
     { id:"w_fri_tuck",  text:"Finalise tuck shop reconciliation" },
     { id:"w_fri_med",   text:"Restock Medicine Chest fully", critical:true },
-    { id:"w_fri_book",  text:"Final check incoming group — no double bookings", critical:true },
-  ]},
+    { id:"w_fri_book",  text:"Final check incoming group — no double bookings", critical:true }]},
   Sat:{ label:"Saturday — Turnaround", items:[] },
 };
 
@@ -2161,32 +2018,27 @@ const CAMP_SATURDAY = [
     { id:"sat_tuck",    text:"Distribute all tuck change — verify every name", critical:true },
     { id:"sat_damage",  text:"Walkthrough with Commandants — document damage", critical:true },
     { id:"sat_checkout",text:"Sign off departure with Commandant", critical:true },
-    { id:"sat_gates",   text:"Secure all gates after last vehicle leaves" },
-  ]},
+    { id:"sat_gates",   text:"Secure all gates after last vehicle leaves" }]},
   { phase:"Phase 2 — Turnover (9am-1pm)", items:[
     { id:"sat_bedding", text:"Strip and replace ALL bedding — room by room" },
     { id:"sat_kitchen", text:"Deep clean kitchen", critical:true },
     { id:"sat_pool_area",text:"Check pool — safety equipment, water quality", critical:true },
     { id:"sat_tuck_count",text:"Count remaining stock — log closing inventory" },
-    { id:"sat_restock", text:"Restock tuck for incoming session" },
-  ]},
+    { id:"sat_restock", text:"Restock tuck for incoming session" }]},
   { phase:"Phase 3 — Arrival (1-3pm)", items:[
     { id:"sat_final",   text:"Final walkthrough — all areas clean and ready", critical:true },
     { id:"sat_checkin", text:"Check in each camper against registration", critical:true },
     { id:"sat_tuck_col",text:"Collect tuck money Day 1 — log every name", critical:true },
     { id:"sat_orient",  text:"Orientate Commandants — tour, emergency procedures", critical:true },
     { id:"sat_medchest",text:"Hand over Medicine Chest to Commandant", critical:true },
-    { id:"sat_reg",     text:"Confirm registration filed for this group", critical:true },
-  ]},
-];
+    { id:"sat_reg",     text:"Confirm registration filed for this group", critical:true }]}];
 
 const CAMP_FIVE_RULES = [
   "Never hire or dismiss staff — all staffing to the Board",
   "Never process receipts/invoices not through the office first",
   "Never confirm a booking without Statement of Faith compliance",
   "Never authorise a bank transfer without reviewing it",
-  "Never handle staff misconduct alone — report to Chairman immediately",
-];
+  "Never handle staff misconduct alone — report to Chairman immediately"];
 
 const CAMP_CONTACTS = [
   { name:"Ben & Jessica Salmon", role:"Primary Support", when:"Guidance, consultation, escalation to Shanda" },
@@ -2196,8 +2048,7 @@ const CAMP_CONTACTS = [
   { name:"Groundsman", role:"Site maintenance", when:"Repairs, grounds, faults" },
   { name:"Driver", role:"Transport", when:"All vehicle and transport needs" },
   { name:"Kitchen Staff", role:"Catering", when:"Meals, menu changes" },
-  { name:"Cleaners", role:"Site cleaning", when:"Schedules and standards" },
-];
+  { name:"Cleaners", role:"Site cleaning", when:"Schedules and standards" }];
 
 const MOONS = [
   { date:"2026-06-14", type:"new",  name:"New Strawberry Moon",  theme:"Prepare to receive · Open to harvest" },
@@ -2205,8 +2056,7 @@ const MOONS = [
   { date:"2026-07-14", type:"new",  name:"New Buck Moon",        theme:"Set intentions for power · Courage · Growth" },
   { date:"2026-07-29", type:"full", name:"Buck Moon",            theme:"Strength · Courage · Stepping into power" },
   { date:"2026-08-12", type:"new",  name:"New Sturgeon Moon",    theme:"Plant abundance · Strengthen resource systems" },
-  { date:"2026-08-28", type:"full", name:"Sturgeon Moon",        theme:"Abundance · Resource awareness · Resilience" },
-];
+  { date:"2026-08-28", type:"full", name:"Sturgeon Moon",        theme:"Abundance · Resource awareness · Resilience" }];
 function moonDate(ds) {
   return new Date(ds+"T12:00:00").toLocaleDateString("en-GB",{day:"numeric",month:"short"});
 }
@@ -2214,8 +2064,7 @@ function moonDate(ds) {
 const HS_SKILLS = [
   "Art","Storytelling","Film studies","Bike riding (Norah)","Music",
   "Nature study","Cooking / baking","Science experiment","Drama / role play",
-  "Photography","Gardening","Other",
-];
+  "Photography","Gardening","Other"];
 
 const DAYS = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
 const TODAY_STR = new Date().toISOString().slice(0,10);
@@ -3103,8 +2952,7 @@ const FLOW_LEVELS = [
   {key:"spotting",label:"Spotting",color:"#c47ca033",dot:"·"},
   {key:"light",   label:"Light",   color:"#c47ca066",dot:"○"},
   {key:"medium",  label:"Medium",  color:"#c47ca0aa",dot:"●"},
-  {key:"heavy",   label:"Heavy",   color:"#c47ca0",  dot:"◉"},
-];
+  {key:"heavy",   label:"Heavy",   color:"#c47ca0",  dot:"◉"}];
 const ENERGY_OPTS = ["⚡ High","🔆 Good","😐 Okay","🌫 Low","🪫 Depleted"];
 const MOOD_OPTS   = ["🌸 Bright","😊 Content","😶 Neutral","😔 Low","😤 Irritable","😢 Emotional","🌀 Anxious"];
 const BODY_OPTS   = ["💪 Strong","🧘 Grounded","🌊 Fluid","😴 Tired","🤕 Cramps","🫁 Bloated","✨ Clear"];
@@ -3799,8 +3647,7 @@ function App() {
   const NAV = [
     ["home","Home"],["week","Week"],["camp","Camp"],
     ["mocha","Mocha"],["cycle","Cycle"],["life","Life"],
-    ["manual","Manual"],["log","Log"],
-  ];
+    ["manual","Manual"],["log","Log"]];
 
   return (
     <div style={{minHeight:"100vh",background:T.bg,color:T.text,fontFamily:"Georgia,serif",fontSize:14}}>
