@@ -3016,7 +3016,24 @@ function CycleView({ T, dark, cyclePhase, setCyclePhase, cycleDay, setCycleDay, 
             </div>
             <div>
               <label style={{fontSize:10,color:T.textMid,display:"block",marginBottom:3}}>Cycle start date</label>
-              <input type="date" value={cycleStart} onChange={e=>{setCycleStart(e.target.value);save({cycleStart:e.target.value});}} style={{...iS,width:"auto"}} />
+              <input type="date" value={cycleStart} onChange={e=>{
+                  const val = e.target.value;
+                  setCycleStart(val);
+                  if (val) {
+                    const start = new Date(val + 'T00:00:00');
+                    const now = new Date();
+                    const dayNum = Math.max(1, Math.floor((now - start) / (24*60*60*1000)) + 1);
+                    const ph = dayNum <= 7 ? 'menstrual'
+                             : dayNum <= 13 ? 'follicular'
+                             : dayNum <= 16 ? 'ovulatory'
+                             : dayNum <= 28 ? 'luteal' : 'menstrual';
+                    setCyclePhase(ph);
+                    setCycleDay(Math.min(dayNum, 35));
+                    save({cycleStart:val, cyclePhase:ph, cycleDay:Math.min(dayNum,35)});
+                  } else {
+                    save({cycleStart:val});
+                  }
+                }} style={{...iS,width:"auto"}} />
             </div>
           </div>
 
@@ -3438,8 +3455,22 @@ function App() {
   const [mochaPotty,    setMochaPotty]    = useState({});
   const [mochaWeekly,   setMochaWeekly]   = useState({});
   const [manualEntries, setManualEntries] = useState([]);
-  const [cyclePhase,    setCyclePhase]    = useState("follicular");
-  const [cycleDay,      setCycleDay]      = useState(1);
+  const [cyclePhase,    setCyclePhase]    = useState(() => {
+    // Compute phase from hardcoded cycle start — runs before localStorage
+    const start = new Date("2026-08-10T00:00:00");
+    const now = new Date();
+    const dayNum = Math.max(1, Math.floor((now - start) / (24*60*60*1000)) + 1);
+    if (dayNum <= 7)  return "menstrual";
+    if (dayNum <= 13) return "follicular";
+    if (dayNum <= 16) return "ovulatory";
+    if (dayNum <= 28) return "luteal";
+    return "menstrual";
+  });
+  const [cycleDay, setCycleDay] = useState(() => {
+    const start = new Date("2026-08-10T00:00:00");
+    const now = new Date();
+    return Math.min(Math.max(1, Math.floor((now - start) / (24*60*60*1000)) + 1), 35);
+  });
   const [cycleStart,    setCycleStart]    = useState("2026-08-10");
   const [bleedDays,     setBleedDays]     = useState({});
   const [feelingsLog,   setFeelingsLog]   = useState({});
@@ -3457,7 +3488,10 @@ function App() {
   // Storage
   useEffect(() => {
     try {
-      const d = JSON.parse(localStorage.getItem("sr_v4") || "{}");
+      const raw = JSON.parse(localStorage.getItem("sr_v4") || "{}");
+      // Always derive cyclePhase and cycleDay from cycleStart — never from cache
+      // This ensures menstrual phase shows correctly regardless of stored value
+      const d = { ...raw, cyclePhase: undefined, cycleDay: undefined };
       if (d.checked)       setChecked(d.checked);
       if (d.campChecks)    setCampChecks(d.campChecks);
       if (d.campNotes)     setCampNotes(d.campNotes);
@@ -3469,9 +3503,20 @@ function App() {
       if (d.mochaPotty)    setMochaPotty(d.mochaPotty);
       if (d.mochaWeekly)   setMochaWeekly(d.mochaWeekly);
       if (d.manualEntries) setManualEntries(d.manualEntries);
-      if (d.cyclePhase)    setCyclePhase(d.cyclePhase);
-      if (d.cycleDay)      setCycleDay(d.cycleDay);
       if (d.cycleStart)    setCycleStart(d.cycleStart);
+      // Update phase/day if user has set a custom cycleStart date
+      if (d.cycleStart && d.cycleStart !== "2026-08-10") {
+        const start = new Date(d.cycleStart + 'T00:00:00');
+        const now = new Date();
+        const dayNum = Math.max(1, Math.floor((now - start) / (24*60*60*1000)) + 1);
+        const phase = dayNum <= 7 ? 'menstrual'
+                    : dayNum <= 13 ? 'follicular'
+                    : dayNum <= 16 ? 'ovulatory'
+                    : dayNum <= 28 ? 'luteal'
+                    : 'menstrual'; // next cycle
+        setCyclePhase(phase);
+        setCycleDay(Math.min(dayNum, 35));
+      }
       if (d.bleedDays)     setBleedDays(d.bleedDays);
       if (d.feelingsLog)   setFeelingsLog(d.feelingsLog);
       if (d.mustsDone)     setMustsDone(d.mustsDone);
