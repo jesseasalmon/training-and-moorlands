@@ -34,6 +34,7 @@
 <body>
   <div id="root"></div>
   <script type="text/babel" data-presets="react">
+
 const { useState, useEffect } = React;
 
 // ── CONSTANTS ──
@@ -253,7 +254,7 @@ const MENSTRUAL_WORKOUT = {
     '─── MORNING WALK ───',
     '30–45 min gentle walk. No pace target. Fresh air. Presence.',
     '─── YOGA / STRETCHING (20 min) ───',
-    'Cat-cow 2×10. Child's pose 2 min. Pigeon pose 90 sec each side.',
+    'Cat-cow 2×10. Child\'s pose 2 min. Pigeon pose 90 sec each side.',
     'Supine twist 2×60 sec each side. Legs up the wall 5 min.',
     'Figure-four glute stretch 2×60 sec each side.',
     '─── GENTLE SWIM (if pool available) ───',
@@ -447,7 +448,7 @@ function HomeView({ T, TEAL, BLUE, AMBER, PURPLE, RED, GREEN,
 
   const scheduleToday = DAILY_SCHEDULE[dow] || DAILY_SCHEDULE['Sun'];
 
-  // Build today's musts checklist
+  // Build today\'s musts checklist
   const todayKey = today.toISOString().slice(0,10);
 
   const mustsDone = DAILY_MUSTS.filter(m => checked[`must_${todayKey}_${m.id}`]).length;
@@ -484,11 +485,11 @@ function HomeView({ T, TEAL, BLUE, AMBER, PURPLE, RED, GREEN,
         </div>
       </div>
 
-      {/* Today's session */}
+      {/* Today\'s session */}
       <div style={{ background:T.surface, border:`1px solid ${T.border}`,
         borderRadius:10, padding:'12px 14px', marginBottom:14 }}>
         <div style={{ fontSize:10, textTransform:'uppercase', letterSpacing:'0.12em',
-          color:T.textFaint, marginBottom:6 }}>Today's Training</div>
+          color:T.textFaint, marginBottom:6 }}>Today\'s Training</div>
         <div style={{ fontSize:13, color:T.text, fontWeight:600 }}>{scheduleToday.label}</div>
         <div style={{ fontSize:11, color:T.textFaint, marginTop:3 }}>{scheduleToday.note}</div>
         {isLowEnergy && (
@@ -1227,7 +1228,7 @@ function DisasterView({ T, TEAL, AMBER, BLUE, RED,
 
   const completed = DISASTER_COURSES.filter(c => disasterDone.includes(c.course)).length;
 
-  const toggle = (course) => {
+  const toggleCourse = (course) => {
     const next = disasterDone.includes(course)
       ? disasterDone.filter(c => c !== course)
       : [...disasterDone, course];
@@ -1251,7 +1252,7 @@ function DisasterView({ T, TEAL, AMBER, BLUE, RED,
       {DISASTER_COURSES.map((course, i) => {
         const done = disasterDone.includes(course.course);
         return (
-          <div key={i} onClick={() => toggle(course.course)} style={{
+          <div key={i} onClick={() => toggleCourse(course.course)} style={{
             background: done ? TEAL+'18' : T.surface,
             border:`1px solid ${done ? TEAL : T.border}`,
             borderRadius:10, padding:'12px 14px', marginBottom:10, cursor:'pointer',
@@ -1699,6 +1700,7 @@ function App() {
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(React.createElement(App));
-  </script>
+  
+</script>
 </body>
 </html>
