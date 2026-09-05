@@ -266,6 +266,1007 @@ const MENSTRUAL_WORKOUT = {
 };
 
 // ── SPANISH CONTENT ──
+const VOCAB_LIST = [
+  [1,'el/la','the'],
+  [2,'de','of/from'],
+  [3,'que','that/which'],
+  [4,'y','and'],
+  [5,'a','to/at'],
+  [6,'en','in/on'],
+  [7,'un/una','a/an'],
+  [8,'ser','to be (permanent)'],
+  [9,'se','oneself/impersonal'],
+  [10,'no','no/not'],
+  [11,'haber','to have (aux.)'],
+  [12,'por','for/by'],
+  [13,'con','with'],
+  [14,'su','his/her/its/your'],
+  [15,'para','for/in order to'],
+  [16,'como','as/like/how'],
+  [17,'estar','to be (state)'],
+  [18,'tener','to have'],
+  [19,'le','to him/her/you'],
+  [20,'lo','it/him'],
+  [21,'todo','all/everything'],
+  [22,'pero','but'],
+  [23,'más','more'],
+  [24,'hacer','to do/make'],
+  [25,'o','or'],
+  [26,'poder','to be able to/can'],
+  [27,'decir','to say/tell'],
+  [28,'este/esta','this'],
+  [29,'ir','to go'],
+  [30,'otro','other/another'],
+  [31,'ese/esa','that'],
+  [32,'si','if'],
+  [33,'me','me/myself'],
+  [34,'ya','already/now'],
+  [35,'ver','to see'],
+  [36,'porque','because'],
+  [37,'dar','to give'],
+  [38,'cuando','when'],
+  [39,'él','he'],
+  [40,'muy','very'],
+  [41,'sin','without'],
+  [42,'vez','time/occasion'],
+  [43,'mucho','a lot/much'],
+  [44,'saber','to know (facts)'],
+  [45,'qué','what'],
+  [46,'sobre','about/on'],
+  [47,'mi','my'],
+  [48,'alguno','some'],
+  [49,'mismo','same/self'],
+  [50,'yo','I'],
+  [51,'también','also'],
+  [52,'hasta','until/even'],
+  [53,'año','year'],
+  [54,'dos','two'],
+  [55,'querer','to want'],
+  [56,'entre','between/among'],
+  [57,'así','like this/so'],
+  [58,'primero','first'],
+  [59,'desde','since/from'],
+  [60,'grande','big'],
+  [61,'eso','that (neuter)'],
+  [62,'ni','nor'],
+  [63,'nos','us/ourselves'],
+  [64,'llegar','to arrive'],
+  [65,'pasar','to happen/pass'],
+  [66,'tiempo','time/weather'],
+  [67,'ella','she'],
+  [68,'sí','yes'],
+  [69,'día','day'],
+  [70,'uno','one'],
+  [71,'bien','well/good'],
+  [72,'poco','little/few'],
+  [73,'deber','must/should'],
+  [74,'entonces','then'],
+  [75,'poner','to put'],
+  [76,'cosa','thing'],
+  [77,'tanto','so much'],
+  [78,'hombre','man'],
+  [79,'parecer','to seem'],
+  [80,'nuestro','our'],
+  [81,'tan','so'],
+  [82,'donde','where'],
+  [83,'ahora','now'],
+  [84,'parte','part'],
+  [85,'después','after'],
+  [86,'vida','life'],
+  [87,'quedar','to remain/stay'],
+  [88,'siempre','always'],
+  [89,'creer','to believe'],
+  [90,'hablar','to speak'],
+  [91,'llevar','to carry/wear'],
+  [92,'dejar','to leave/let'],
+  [93,'nada','nothing'],
+  [94,'cada','each'],
+  [95,'seguir','to follow/continue'],
+  [96,'menos','less'],
+  [97,'nuevo','new'],
+  [98,'encontrar','to find'],
+  [99,'algo','something'],
+  [100,'solo','only/alone'],
+  [101,'venir','to come'],
+  [102,'pensar','to think'],
+  [103,'salir','to leave/go out'],
+  [104,'volver','to return'],
+  [105,'tomar','to take'],
+  [106,'conocer','to know (people/places)'],
+  [107,'vivir','to live'],
+  [108,'sentir','to feel'],
+  [109,'mirar','to look at'],
+  [110,'contar','to count/tell'],
+  [111,'empezar','to begin'],
+  [112,'esperar','to wait/hope'],
+  [113,'buscar','to look for'],
+  [114,'existir','to exist'],
+  [115,'entrar','to enter'],
+  [116,'trabajar','to work'],
+  [117,'escribir','to write'],
+  [118,'perder','to lose'],
+  [119,'producir','to produce'],
+  [120,'ocurrir','to occur'],
+  [121,'entender','to understand'],
+  [122,'pedir','to ask for'],
+  [123,'recordar','to remember'],
+  [124,'terminar','to finish'],
+  [125,'permitir','to allow'],
+  [126,'aparecer','to appear'],
+  [127,'conseguir','to get/achieve'],
+  [128,'comenzar','to begin'],
+  [129,'servir','to serve'],
+  [130,'sacar','to take out'],
+  [131,'necesitar','to need'],
+  [132,'mantener','to maintain'],
+  [133,'resultar','to result/turn out'],
+  [134,'leer','to read'],
+  [135,'caer','to fall'],
+  [136,'cambiar','to change'],
+  [137,'presentar','to present'],
+  [138,'crear','to create'],
+  [139,'abrir','to open'],
+  [140,'considerar','to consider'],
+  [141,'oír','to hear'],
+  [142,'acabar','to finish'],
+  [143,'convertir','to convert/become'],
+  [144,'ganar','to win/earn'],
+  [145,'formar','to form'],
+  [146,'traer','to bring'],
+  [147,'partir','to leave/split'],
+  [148,'morir','to die'],
+  [149,'aceptar','to accept'],
+  [150,'realizar','to carry out'],
+  [151,'suponer','to suppose'],
+  [152,'comprender','to understand'],
+  [153,'lograr','to achieve'],
+  [154,'explicar','to explain'],
+  [155,'preguntar','to ask'],
+  [156,'tocar','to touch/play (music)'],
+  [157,'reconocer','to recognize'],
+  [158,'estudiar','to study'],
+  [159,'alcanzar','to reach'],
+  [160,'nacer','to be born'],
+  [161,'dirigir','to direct/lead'],
+  [162,'correr','to run'],
+  [163,'utilizar','to use'],
+  [164,'pagar','to pay'],
+  [165,'ayudar','to help'],
+  [166,'gustar','to like/please'],
+  [167,'jugar','to play'],
+  [168,'escuchar','to listen'],
+  [169,'cumplir','to fulfill'],
+  [170,'ofrecer','to offer'],
+  [171,'descubrir','to discover'],
+  [172,'levantar','to lift/raise'],
+  [173,'intentar','to try'],
+  [174,'usar','to use'],
+  [175,'decidir','to decide'],
+  [176,'por qué','why'],
+  [177,'cuál','which/what'],
+  [178,'quién','who'],
+  [179,'cómo','how'],
+  [180,'cuánto','how much/many'],
+  [181,'aquí','here'],
+  [182,'allí','there'],
+  [183,'hoy','today'],
+  [184,'mañana','tomorrow'],
+  [185,'ayer','yesterday'],
+  [186,'nunca','never'],
+  [187,'todavía','still/yet'],
+  [188,'apenas','barely/hardly'],
+  [189,'además','besides/also'],
+  [190,'aunque','although'],
+  [191,'mientras','while'],
+  [192,'durante','during'],
+  [193,'según','according to'],
+  [194,'contra','against'],
+  [195,'hacia','toward'],
+  [196,'bajo','under'],
+  [197,'sobre todo','above all'],
+  [198,'además de','in addition to'],
+  [199,'acerca de','about'],
+  [200,'dentro','inside'],
+  [201,'cero','zero'],
+  [202,'tres','three'],
+  [203,'cuatro','four'],
+  [204,'cinco','five'],
+  [205,'seis','six'],
+  [206,'siete','seven'],
+  [207,'ocho','eight'],
+  [208,'nueve','nine'],
+  [209,'diez','ten'],
+  [210,'once','eleven'],
+  [211,'doce','twelve'],
+  [212,'trece','thirteen'],
+  [213,'catorce','fourteen'],
+  [214,'quince','fifteen'],
+  [215,'dieciséis','sixteen'],
+  [216,'diecisiete','seventeen'],
+  [217,'dieciocho','eighteen'],
+  [218,'diecinueve','nineteen'],
+  [219,'veinte','twenty'],
+  [220,'veintiuno','twenty-one'],
+  [221,'treinta','thirty'],
+  [222,'cuarenta','forty'],
+  [223,'cincuenta','fifty'],
+  [224,'sesenta','sixty'],
+  [225,'setenta','seventy'],
+  [226,'ochenta','eighty'],
+  [227,'noventa','ninety'],
+  [228,'cien','one hundred'],
+  [229,'doscientos','two hundred'],
+  [230,'trescientos','three hundred'],
+  [231,'quinientos','five hundred'],
+  [232,'mil','thousand'],
+  [233,'millón','million'],
+  [234,'segundo','second (ordinal)'],
+  [235,'tercero','third (ordinal)'],
+  [236,'último','last'],
+  [237,'medio','half'],
+  [238,'lunes','Monday'],
+  [239,'martes','Tuesday'],
+  [240,'miércoles','Wednesday'],
+  [241,'jueves','Thursday'],
+  [242,'viernes','Friday'],
+  [243,'sábado','Saturday'],
+  [244,'domingo','Sunday'],
+  [245,'enero','January'],
+  [246,'febrero','February'],
+  [247,'marzo','March'],
+  [248,'abril','April'],
+  [249,'mayo','May'],
+  [250,'junio','June'],
+  [251,'julio','July'],
+  [252,'agosto','August'],
+  [253,'septiembre','September'],
+  [254,'octubre','October'],
+  [255,'noviembre','November'],
+  [256,'diciembre','December'],
+  [257,'semana','week'],
+  [258,'familia','family'],
+  [259,'madre','mother'],
+  [260,'padre','father'],
+  [261,'hijo/hija','son/daughter'],
+  [262,'hermano/hermana','brother/sister'],
+  [263,'abuelo/abuela','grandfather/grandmother'],
+  [264,'esposo/esposa','husband/wife'],
+  [265,'tío/tía','uncle/aunt'],
+  [266,'primo/prima','cousin'],
+  [267,'nieto/nieta','grandson/granddaughter'],
+  [268,'amigo/amiga','friend'],
+  [269,'niño/niña','child/boy/girl'],
+  [270,'bebé','baby'],
+  [271,'persona','person'],
+  [272,'gente','people'],
+  [273,'mujer','woman'],
+  [274,'chico/chica','guy/girl'],
+  [275,'adulto','adult'],
+  [276,'vecino','neighbor'],
+  [277,'pareja','couple/partner'],
+  [278,'novio/novia','boyfriend/girlfriend'],
+  [279,'señor/señora','Mr./Mrs., sir/madam'],
+  [280,'jefe','boss'],
+  [281,'compañero','companion/coworker'],
+  [282,'adolescente','teenager'],
+  [283,'bebe','drinks (verb form) / infant colloquial'],
+  [284,'familiar','family member/familiar'],
+  [285,'pariente','relative'],
+  [286,'gemelo','twin'],
+  [287,'suegro/suegra','father-in-law/mother-in-law'],
+  [288,'cuñado/cuñada','brother-in-law/sister-in-law'],
+  [289,'nombre','name'],
+  [290,'apellido','last name'],
+  [291,'edad','age'],
+  [292,'nacionalidad','nationality'],
+  [293,'niños','children'],
+  [294,'bebés','babies'],
+  [295,'padres','parents'],
+  [296,'cuerpo','body'],
+  [297,'cabeza','head'],
+  [298,'cara','face'],
+  [299,'ojo','eye'],
+  [300,'nariz','nose'],
+  [301,'boca','mouth'],
+  [302,'oreja','ear'],
+  [303,'diente','tooth'],
+  [304,'cuello','neck'],
+  [305,'hombro','shoulder'],
+  [306,'brazo','arm'],
+  [307,'mano','hand'],
+  [308,'dedo','finger'],
+  [309,'pierna','leg'],
+  [310,'pie','foot'],
+  [311,'rodilla','knee'],
+  [312,'espalda','back'],
+  [313,'pecho','chest'],
+  [314,'estómago','stomach'],
+  [315,'corazón','heart'],
+  [316,'piel','skin'],
+  [317,'pelo','hair'],
+  [318,'cabello','hair (formal)'],
+  [319,'uña','nail'],
+  [320,'cerebro','brain'],
+  [321,'hueso','bone'],
+  [322,'músculo','muscle'],
+  [323,'sangre','blood'],
+  [324,'pulmón','lung'],
+  [325,'cadera','hip'],
+  [326,'tobillo','ankle'],
+  [327,'muñeca','wrist'],
+  [328,'codo','elbow'],
+  [329,'labio','lip'],
+  [330,'ceja','eyebrow'],
+  [331,'mejilla','cheek'],
+  [332,'barbilla','chin'],
+  [333,'garganta','throat'],
+  [334,'cintura','waist'],
+  [335,'vientre','belly'],
+  [336,'casa','house'],
+  [337,'hogar','home'],
+  [338,'habitación','room'],
+  [339,'cocina','kitchen'],
+  [340,'baño','bathroom'],
+  [341,'dormitorio','bedroom'],
+  [342,'sala','living room'],
+  [343,'comedor','dining room'],
+  [344,'puerta','door'],
+  [345,'ventana','window'],
+  [346,'mesa','table'],
+  [347,'silla','chair'],
+  [348,'cama','bed'],
+  [349,'sofá','sofa/couch'],
+  [350,'armario','closet/wardrobe'],
+  [351,'estante','shelf'],
+  [352,'espejo','mirror'],
+  [353,'lámpara','lamp'],
+  [354,'alfombra','rug/carpet'],
+  [355,'pared','wall'],
+  [356,'techo','ceiling/roof'],
+  [357,'piso','floor'],
+  [358,'escalera','stairs'],
+  [359,'jardín','garden'],
+  [360,'patio','yard/patio'],
+  [361,'garaje','garage'],
+  [362,'llave','key'],
+  [363,'cerradura','lock'],
+  [364,'cortina','curtain'],
+  [365,'toalla','towel'],
+  [366,'plato','plate'],
+  [367,'vaso','glass'],
+  [368,'taza','cup'],
+  [369,'cuchara','spoon'],
+  [370,'tenedor','fork'],
+  [371,'cuchillo','knife'],
+  [372,'olla','pot'],
+  [373,'sartén','frying pan'],
+  [374,'nevera','refrigerator'],
+  [375,'horno','oven'],
+  [376,'comida','food'],
+  [377,'agua','water'],
+  [378,'pan','bread'],
+  [379,'leche','milk'],
+  [380,'carne','meat'],
+  [381,'pollo','chicken'],
+  [382,'pescado','fish'],
+  [383,'arroz','rice'],
+  [384,'huevo','egg'],
+  [385,'queso','cheese'],
+  [386,'fruta','fruit'],
+  [387,'verdura','vegetable'],
+  [388,'manzana','apple'],
+  [389,'plátano','banana'],
+  [390,'naranja','orange'],
+  [391,'tomate','tomato'],
+  [392,'papa/patata','potato'],
+  [393,'cebolla','onion'],
+  [394,'ajo','garlic'],
+  [395,'sal','salt'],
+  [396,'azúcar','sugar'],
+  [397,'aceite','oil'],
+  [398,'café','coffee'],
+  [399,'té','tea'],
+  [400,'jugo','juice'],
+  [401,'vino','wine'],
+  [402,'cerveza','beer'],
+  [403,'postre','dessert'],
+  [404,'sopa','soup'],
+  [405,'ensalada','salad'],
+  [406,'desayuno','breakfast'],
+  [407,'almuerzo','lunch'],
+  [408,'cena','dinner'],
+  [409,'hambre','hunger'],
+  [410,'sed','thirst'],
+  [411,'sabor','flavor/taste'],
+  [412,'dulce','sweet'],
+  [413,'salado','salty'],
+  [414,'picante','spicy'],
+  [415,'cocinar','to cook'],
+  [416,'ropa','clothes'],
+  [417,'camisa','shirt'],
+  [418,'pantalón','pants'],
+  [419,'vestido','dress'],
+  [420,'falda','skirt'],
+  [421,'zapato','shoe'],
+  [422,'calcetín','sock'],
+  [423,'chaqueta','jacket'],
+  [424,'abrigo','coat'],
+  [425,'sombrero','hat'],
+  [426,'cinturón','belt'],
+  [427,'bolsillo','pocket'],
+  [428,'bolso','bag/purse'],
+  [429,'guante','glove'],
+  [430,'bufanda','scarf'],
+  [431,'traje','suit'],
+  [432,'suéter','sweater'],
+  [433,'ropa interior','underwear'],
+  [434,'pijama','pajamas'],
+  [435,'bota','boot'],
+  [436,'gorra','cap'],
+  [437,'corbata','tie'],
+  [438,'anillo','ring'],
+  [439,'collar','necklace'],
+  [440,'pulsera','bracelet'],
+  [441,'reloj','watch/clock'],
+  [442,'gafas','glasses'],
+  [443,'tela','fabric'],
+  [444,'talla','size'],
+  [445,'moda','fashion'],
+  [446,'vestir','to dress'],
+  [447,'ponerse','to put on'],
+  [448,'quitarse','to take off'],
+  [449,'probarse','to try on'],
+  [450,'planchar','to iron'],
+  [451,'lavar','to wash'],
+  [452,'botón','button'],
+  [453,'cremallera','zipper'],
+  [454,'manga','sleeve'],
+  [455,'color','color'],
+  [456,'rojo','red'],
+  [457,'azul','blue'],
+  [458,'verde','green'],
+  [459,'amarillo','yellow'],
+  [460,'negro','black'],
+  [461,'blanco','white'],
+  [462,'gris','gray'],
+  [463,'marrón','brown'],
+  [464,'rosa','pink'],
+  [465,'morado','purple'],
+  [466,'claro','light/clear'],
+  [467,'oscuro','dark'],
+  [468,'bonito','pretty'],
+  [469,'feo','ugly'],
+  [470,'alto','tall/high'],
+  [471,'largo','long'],
+  [472,'corto','short (length)'],
+  [473,'ancho','wide'],
+  [474,'estrecho','narrow'],
+  [475,'redondo','round'],
+  [476,'cuadrado','square'],
+  [477,'pequeño','small'],
+  [478,'gordo','fat'],
+  [479,'delgado','thin'],
+  [480,'fuerte','strong'],
+  [481,'débil','weak'],
+  [482,'rápido','fast'],
+  [483,'lento','slow'],
+  [484,'fácil','easy'],
+  [485,'difícil','difficult'],
+  [486,'bueno','good'],
+  [487,'malo','bad'],
+  [488,'viejo','old'],
+  [489,'joven','young'],
+  [490,'limpio','clean'],
+  [491,'naturaleza','nature'],
+  [492,'árbol','tree'],
+  [493,'flor','flower'],
+  [494,'planta','plant'],
+  [495,'hierba','grass'],
+  [496,'bosque','forest'],
+  [497,'montaña','mountain'],
+  [498,'río','river'],
+  [499,'mar','sea'],
+  [500,'océano','ocean'],
+  [501,'playa','beach'],
+  [502,'cielo','sky'],
+  [503,'sol','sun'],
+  [504,'luna','moon'],
+  [505,'estrella','star'],
+  [506,'nube','cloud'],
+  [507,'lluvia','rain'],
+  [508,'nieve','snow'],
+  [509,'viento','wind'],
+  [510,'tormenta','storm'],
+  [511,'calor','heat'],
+  [512,'frío','cold'],
+  [513,'clima','climate'],
+  [514,'animal','animal'],
+  [515,'perro','dog'],
+  [516,'gato','cat'],
+  [517,'pájaro','bird'],
+  [518,'pez','fish (animal)'],
+  [519,'caballo','horse'],
+  [520,'vaca','cow'],
+  [521,'cerdo','pig'],
+  [522,'oveja','sheep'],
+  [523,'león','lion'],
+  [524,'oso','bear'],
+  [525,'insecto','insect'],
+  [526,'mosca','fly'],
+  [527,'araña','spider'],
+  [528,'serpiente','snake'],
+  [529,'tierra','earth/land'],
+  [530,'piedra','stone'],
+  [531,'hora','hour'],
+  [532,'minuto','minute'],
+  [533,'tarde','afternoon/late'],
+  [534,'noche','night'],
+  [535,'mediodía','noon'],
+  [536,'medianoche','midnight'],
+  [537,'ahora mismo','right now'],
+  [538,'pronto','soon'],
+  [539,'tarde o temprano','sooner or later'],
+  [540,'temprano','early'],
+  [541,'reciente','recent'],
+  [542,'futuro','future'],
+  [543,'pasado','past'],
+  [544,'presente','present'],
+  [545,'actual','current'],
+  [546,'antes','before'],
+  [547,'luego','later/then'],
+  [548,'enseguida','right away'],
+  [549,'de repente','suddenly'],
+  [550,'a veces','sometimes'],
+  [551,'frecuentemente','frequently'],
+  [552,'raramente','rarely'],
+  [553,'diariamente','daily'],
+  [554,'mensual','monthly'],
+  [555,'anual','annual'],
+  [556,'siglo','century'],
+  [557,'década','decade'],
+  [558,'época','era/time period'],
+  [559,'fecha','date'],
+  [560,'calendario','calendar'],
+  [561,'horario','schedule'],
+  [562,'plazo','deadline/period'],
+  [563,'duración','duration'],
+  [564,'momento','moment'],
+  [565,'instante','instant'],
+  [566,'rato','a while'],
+  [567,'todavía no','not yet'],
+  [568,'por fin','finally'],
+  [569,'ciudad','city'],
+  [570,'pueblo','town'],
+  [571,'país','country'],
+  [572,'calle','street'],
+  [573,'avenida','avenue'],
+  [574,'carretera','highway/road'],
+  [575,'esquina','corner'],
+  [576,'plaza','square'],
+  [577,'edificio','building'],
+  [578,'tienda','store'],
+  [579,'mercado','market'],
+  [580,'supermercado','supermarket'],
+  [581,'restaurante','restaurant'],
+  [582,'hotel','hotel'],
+  [583,'hospital','hospital'],
+  [584,'escuela','school'],
+  [585,'universidad','university'],
+  [586,'biblioteca','library'],
+  [587,'iglesia','church'],
+  [588,'banco','bank'],
+  [589,'aeropuerto','airport'],
+  [590,'estación','station'],
+  [591,'parque','park'],
+  [592,'museo','museum'],
+  [593,'oficina','office'],
+  [594,'fábrica','factory'],
+  [595,'granja','farm'],
+  [596,'frontera','border'],
+  [597,'mapa','map'],
+  [598,'dirección','address/direction'],
+  [599,'viaje','trip'],
+  [600,'viajar','to travel'],
+  [601,'coche/carro','car'],
+  [602,'autobús','bus'],
+  [603,'tren','train'],
+  [604,'avión','airplane'],
+  [605,'barco','boat'],
+  [606,'bicicleta','bicycle'],
+  [607,'moto','motorcycle'],
+  [608,'taxi','taxi'],
+  [609,'trabajo','work/job'],
+  [610,'empleo','employment'],
+  [611,'empresa','company'],
+  [612,'negocio','business'],
+  [613,'reunión','meeting'],
+  [614,'proyecto','project'],
+  [615,'tarea','task/homework'],
+  [616,'informe','report'],
+  [617,'documento','document'],
+  [618,'correo','mail/email'],
+  [619,'carta','letter'],
+  [620,'firma','signature'],
+  [621,'contrato','contract'],
+  [622,'sueldo','salary'],
+  [623,'dinero','money'],
+  [624,'cliente','client'],
+  [625,'empleado','employee'],
+  [626,'equipo','team'],
+  [627,'colega','colleague'],
+  [628,'médico','doctor'],
+  [629,'enfermero','nurse'],
+  [630,'maestro/profesor','teacher'],
+  [631,'estudiante','student'],
+  [632,'abogado','lawyer'],
+  [633,'ingeniero','engineer'],
+  [634,'policía','police officer'],
+  [635,'cocinero','cook/chef'],
+  [636,'camarero','waiter'],
+  [637,'agricultor','farmer'],
+  [638,'escritor','writer'],
+  [639,'artista','artist'],
+  [640,'científico','scientist'],
+  [641,'piloto','pilot'],
+  [642,'soldado','soldier'],
+  [643,'clase','class'],
+  [644,'libro','book'],
+  [645,'cuaderno','notebook'],
+  [646,'lápiz','pencil'],
+  [647,'bolígrafo','pen'],
+  [648,'feliz','happy'],
+  [649,'triste','sad'],
+  [650,'enojado','angry'],
+  [651,'asustado','scared'],
+  [652,'sorprendido','surprised'],
+  [653,'cansado','tired'],
+  [654,'aburrido','bored'],
+  [655,'emocionado','excited'],
+  [656,'nervioso','nervous'],
+  [657,'tranquilo','calm'],
+  [658,'preocupado','worried'],
+  [659,'orgulloso','proud'],
+  [660,'celoso','jealous'],
+  [661,'avergonzado','embarrassed'],
+  [662,'confundido','confused'],
+  [663,'seguro','sure/safe'],
+  [664,'inseguro','insecure'],
+  [665,'contento','content/happy'],
+  [666,'enamorado','in love'],
+  [667,'solitario','lonely'],
+  [668,'amable','kind'],
+  [669,'simpático','nice/friendly'],
+  [670,'antipático','unpleasant'],
+  [671,'generoso','generous'],
+  [672,'egoísta','selfish'],
+  [673,'honesto','honest'],
+  [674,'mentiroso','liar'],
+  [675,'valiente','brave'],
+  [676,'cobarde','coward'],
+  [677,'paciente','patient'],
+  [678,'impaciente','impatient'],
+  [679,'inteligente','intelligent'],
+  [680,'tonto','silly/dumb'],
+  [681,'curioso','curious'],
+  [682,'responsable','responsible'],
+  [683,'perezoso','lazy'],
+  [684,'trabajador','hardworking'],
+  [685,'optimista','optimistic'],
+  [686,'pesimista','pessimistic'],
+  [687,'sensible','sensitive'],
+  [688,'teléfono','phone'],
+  [689,'celular/móvil','cell phone'],
+  [690,'computadora/ordenador','computer'],
+  [691,'internet','internet'],
+  [692,'correo electrónico','email'],
+  [693,'mensaje','message'],
+  [694,'llamada','call'],
+  [695,'pantalla','screen'],
+  [696,'teclado','keyboard'],
+  [697,'aplicación','app'],
+  [698,'contraseña','password'],
+  [699,'wifi','wifi'],
+  [700,'red social','social network'],
+  [701,'video','video'],
+  [702,'foto','photo'],
+  [703,'cámara','camera'],
+  [704,'archivo','file'],
+  [705,'descargar','to download'],
+  [706,'subir','to upload'],
+  [707,'conectar','to connect'],
+  [708,'internet inalámbrico','wifi'],
+  [709,'batería','battery'],
+  [710,'cargador','charger'],
+  [711,'tableta','tablet'],
+  [712,'impresora','printer'],
+  [713,'programa','program'],
+  [714,'software','software'],
+  [715,'sitio web','website'],
+  [716,'navegador','browser'],
+  [717,'actualizar','to update'],
+  [718,'guardar','to save'],
+  [719,'borrar','to delete'],
+  [720,'enviar','to send'],
+  [721,'recibir','to receive'],
+  [722,'compartir','to share'],
+  [723,'seguir (redes)','to follow (social media)'],
+  [724,'me gusta','like (social media)'],
+  [725,'comentario','comment'],
+  [726,'publicar','to post'],
+  [727,'amar','to love'],
+  [728,'odiar','to hate'],
+  [729,'disfrutar','to enjoy'],
+  [730,'descansar','to rest'],
+  [731,'dormir','to sleep'],
+  [732,'despertar','to wake up'],
+  [733,'levantarse','to get up'],
+  [734,'acostarse','to go to bed'],
+  [735,'bañarse','to bathe'],
+  [736,'vestirse','to get dressed'],
+  [737,'peinarse','to comb one\'s hair'],
+  [738,'afeitarse','to shave'],
+  [739,'cepillarse','to brush'],
+  [740,'caminar','to walk'],
+  [741,'saltar','to jump'],
+  [742,'nadar','to swim'],
+  [743,'bailar','to dance'],
+  [744,'cantar','to sing'],
+  [745,'pintar','to paint'],
+  [746,'dibujar','to draw'],
+  [747,'construir','to build'],
+  [748,'romper','to break'],
+  [749,'arreglar','to fix'],
+  [750,'limpiar','to clean'],
+  [751,'ensuciar','to dirty'],
+  [752,'ordenar','to organize'],
+  [753,'prestar','to lend'],
+  [754,'devolver','to return (something)'],
+  [755,'regalar','to give (a gift)'],
+  [756,'comprar','to buy'],
+  [757,'vender','to sell'],
+  [758,'gastar','to spend'],
+  [759,'ahorrar','to save (money)'],
+  [760,'invertir','to invest'],
+  [761,'cobrar','to charge/collect'],
+  [762,'prestar atención','to pay attention'],
+  [763,'olvidar','to forget'],
+  [764,'sin embargo','however'],
+  [765,'por lo tanto','therefore'],
+  [766,'en cambio','on the other hand'],
+  [767,'por ejemplo','for example'],
+  [768,'es decir','that is to say'],
+  [769,'en resumen','in summary'],
+  [770,'finalmente','finally'],
+  [771,'en primer lugar','in the first place'],
+  [772,'en segundo lugar','secondly'],
+  [773,'a pesar de','despite'],
+  [774,'gracias a','thanks to'],
+  [775,'debido a','due to'],
+  [776,'con respecto a','regarding'],
+  [777,'en cuanto a','as for'],
+  [778,'de hecho','in fact'],
+  [779,'por supuesto','of course'],
+  [780,'obviamente','obviously'],
+  [781,'naturalmente','naturally'],
+  [782,'posiblemente','possibly'],
+  [783,'probablemente','probably'],
+  [784,'quizás','maybe'],
+  [785,'tal vez','perhaps'],
+  [786,'seguramente','surely'],
+  [787,'definitivamente','definitely'],
+  [788,'realmente','really'],
+  [789,'verdaderamente','truly'],
+  [790,'exactamente','exactly'],
+  [791,'aproximadamente','approximately'],
+  [792,'completamente','completely'],
+  [793,'totalmente','totally'],
+  [794,'parcialmente','partially'],
+  [795,'especialmente','especially'],
+  [796,'particularmente','particularly'],
+  [797,'generalmente','generally'],
+  [798,'normalmente','normally'],
+  [799,'usualmente','usually'],
+  [800,'constantemente','constantly'],
+  [801,'continuamente','continuously'],
+  [802,'idea','idea'],
+  [803,'pensamiento','thought'],
+  [804,'opinión','opinion'],
+  [805,'razón','reason'],
+  [806,'problema','problem'],
+  [807,'solución','solution'],
+  [808,'pregunta','question'],
+  [809,'respuesta','answer'],
+  [810,'duda','doubt'],
+  [811,'verdad','truth'],
+  [812,'mentira','lie'],
+  [813,'error','error/mistake'],
+  [814,'éxito','success'],
+  [815,'fracaso','failure'],
+  [816,'oportunidad','opportunity'],
+  [817,'riesgo','risk'],
+  [818,'cambio','change'],
+  [819,'diferencia','difference'],
+  [820,'semejanza','similarity'],
+  [821,'relación','relationship'],
+  [822,'situación','situation'],
+  [823,'condición','condition'],
+  [824,'resultado','result'],
+  [825,'efecto','effect'],
+  [826,'causa','cause'],
+  [827,'objetivo','goal/objective'],
+  [828,'meta','goal'],
+  [829,'plan','plan'],
+  [830,'decisión','decision'],
+  [831,'elección','choice'],
+  [832,'libertad','freedom'],
+  [833,'derecho','right (legal)'],
+  [834,'ley','law'],
+  [835,'regla','rule'],
+  [836,'norma','norm/standard'],
+  [837,'valor','value'],
+  [838,'calidad','quality'],
+  [839,'cantidad','quantity'],
+  [840,'nivel','level'],
+  [841,'grado','degree'],
+  [842,'deporte','sport'],
+  [843,'fútbol','soccer'],
+  [844,'baloncesto','basketball'],
+  [845,'tenis','tennis'],
+  [846,'natación','swimming'],
+  [847,'partido','match/game'],
+  [848,'juego','game'],
+  [849,'jugador','player'],
+  [850,'entrenador','coach'],
+  [851,'gimnasio','gym'],
+  [852,'ejercicio','exercise'],
+  [853,'competencia','competition'],
+  [854,'campeón','champion'],
+  [855,'premio','prize'],
+  [856,'música','music'],
+  [857,'canción','song'],
+  [858,'película','movie'],
+  [859,'serie','TV series'],
+  [860,'programa de tv','TV show'],
+  [861,'actor/actriz','actor/actress'],
+  [862,'cantante','singer'],
+  [863,'concierto','concert'],
+  [864,'teatro','theater'],
+  [865,'baile','dance'],
+  [866,'fiesta','party'],
+  [867,'celebración','celebration'],
+  [868,'vacaciones','vacation'],
+  [869,'descanso','rest/break'],
+  [870,'hobby/pasatiempo','hobby'],
+  [871,'lectura','reading'],
+  [872,'pintura','painting'],
+  [873,'fotografía','photography'],
+  [874,'videojuego','video game'],
+  [875,'cartas','cards'],
+  [876,'ajedrez','chess'],
+  [877,'rompecabezas','puzzle'],
+  [878,'mascota','pet'],
+  [879,'acuario','aquarium'],
+  [880,'zoológico','zoo'],
+  [881,'salud','health'],
+  [882,'enfermedad','illness'],
+  [883,'dolor','pain'],
+  [884,'fiebre','fever'],
+  [885,'tos','cough'],
+  [886,'gripe','flu'],
+  [887,'resfriado','cold (illness)'],
+  [888,'alergia','allergy'],
+  [889,'herida','wound'],
+  [890,'cicatriz','scar'],
+  [891,'medicina','medicine'],
+  [892,'pastilla','pill'],
+  [893,'receta','prescription/recipe'],
+  [894,'vacuna','vaccine'],
+  [895,'tratamiento','treatment'],
+  [896,'cirugía','surgery'],
+  [897,'consulta','consultation/appointment'],
+  [898,'cita','appointment'],
+  [899,'clínica','clinic'],
+  [900,'farmacia','pharmacy'],
+  [901,'ambulancia','ambulance'],
+  [902,'emergencia','emergency'],
+  [903,'síntoma','symptom'],
+  [904,'diagnóstico','diagnosis'],
+  [905,'terapia','therapy'],
+  [906,'descanso médico','medical rest'],
+  [907,'embarazo','pregnancy'],
+  [908,'parto','childbirth'],
+  [909,'lactancia','breastfeeding'],
+  [910,'vitamina','vitamin'],
+  [911,'nutrición','nutrition'],
+  [912,'dieta','diet'],
+  [913,'peso','weight'],
+  [914,'altura','height'],
+  [915,'presión','pressure'],
+  [916,'respirar','to breathe'],
+  [917,'toser','to cough'],
+  [918,'estornudar','to sneeze'],
+  [919,'sanar','to heal'],
+  [920,'curar','to cure'],
+  [921,'precio','price'],
+  [922,'costo','cost'],
+  [923,'descuento','discount'],
+  [924,'oferta','offer/sale'],
+  [925,'factura','invoice/receipt'],
+  [926,'tarjeta','card'],
+  [927,'efectivo','cash'],
+  [928,'moneda','currency/coin'],
+  [929,'billete','bill/banknote'],
+  [930,'ahorro','savings'],
+  [931,'préstamo','loan'],
+  [932,'deuda','debt'],
+  [933,'impuesto','tax'],
+  [934,'presupuesto','budget'],
+  [935,'caja','box/register'],
+  [936,'bolsa','bag'],
+  [937,'carrito','cart'],
+  [938,'vendedor','salesperson'],
+  [939,'compra','purchase'],
+  [940,'venta','sale'],
+  [941,'rebaja','markdown/discount'],
+  [942,'garantía','warranty'],
+  [943,'devolución','return (item)'],
+  [944,'marca','brand'],
+  [945,'estilo','style'],
+  [946,'diseño','design'],
+  [947,'producto','product'],
+  [948,'servicio','service'],
+  [949,'factor','factor'],
+  [950,'elemento','element'],
+  [951,'sistema','system'],
+  [952,'proceso','process'],
+  [953,'método','method'],
+  [954,'estructura','structure'],
+  [955,'modelo','model'],
+  [956,'ejemplo','example'],
+  [957,'caso','case'],
+  [958,'punto','point'],
+  [959,'aspecto','aspect'],
+  [960,'detalle','detail'],
+  [961,'información','information'],
+  [962,'dato','data/fact'],
+  [963,'historia','story/history'],
+  [964,'mundo','world'],
+  [965,'universo','universe'],
+  [966,'realidad','reality'],
+  [967,'sueño','dream'],
+  [968,'recuerdo','memory'],
+  [969,'esperanza','hope'],
+  [970,'miedo','fear'],
+  [971,'suerte','luck'],
+  [972,'paz','peace'],
+  [973,'guerra','war'],
+  [974,'aire','air'],
+  [975,'fuego','fire'],
+  [976,'luz','light'],
+  [977,'sombra','shadow'],
+  [978,'humo','smoke'],
+  [979,'ruido','noise'],
+  [980,'silencio','silence'],
+  [981,'olor','smell'],
+  [982,'sonido','sound'],
+  [983,'papel','paper'],
+  [984,'tijeras','scissors'],
+  [985,'pegamento','glue'],
+  [986,'cinta','tape'],
+  [987,'caja de herramientas','toolbox'],
+  [988,'martillo','hammer'],
+  [989,'clavo','nail (hardware)'],
+  [990,'tornillo','screw'],
+  [991,'destornillador','screwdriver'],
+  [992,'escoba','broom'],
+  [993,'basura','trash'],
+  [994,'reciclaje','recycling'],
+  [995,'jabón','soap'],
+  [996,'champú','shampoo'],
+  [997,'cepillo','brush'],
+  [998,'pasta de dientes','toothpaste']
+]; // [num, spanish, english]
+
 const SPANISH_VIDEO_PROMPTS = [
   { id:'s01', title:'Greetings + Introductions', desc:'Hello, my name is, where are you from, pleased to meet you. Survival phrases first.' },
   { id:'s02', title:'Numbers, Time + Dates', desc:'Count to 100, tell time, days of week, months. Essential for scheduling.' },
@@ -973,138 +1974,305 @@ function SpanishView({ T, TEAL, AMBER, BLUE, PURPLE,
   pimsleurCount, setPimsleurCount, lingopieCount, setLingopieCount,
   vocabCount, setVocabCount, vocabLog, setVocabLog, sv, ProgressBar, Pill }) {
 
-  const [tab, setTab] = useState('track');
-  const [addVocab, setAddVocab] = useState('');
+  const [tab, setTab] = useState('vocab');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [learnedWords, setLearnedWords] = useState(() => {
+    try { return JSON.parse(localStorage.getItem('jr_vocab_learned') || '[]'); } catch { return []; }
+  });
+  const [flashMode, setFlashMode] = useState(false);
+  const [flashIdx, setFlashIdx] = useState(0);
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [filterMode, setFilterMode] = useState('all'); // all | learned | unlearned
 
-  const monthlyPimsleur = 16;
-  const monthlyLingo = 16;
-  const totalPimsleur = 192; // 12 months
-  const targetVocab = 1000;
-  const targetDate = 'Jan 30, 2027';
+  const saveLearnedWords = (next) => {
+    setLearnedWords(next);
+    localStorage.setItem('jr_vocab_learned', JSON.stringify(next));
+    setVocabCount(next.length);
+    sv({ vocabCount: next.length });
+  };
+
+  const toggleWord = (num) => {
+    const next = learnedWords.includes(num)
+      ? learnedWords.filter(n => n !== num)
+      : [...learnedWords, num];
+    saveLearnedWords(next);
+  };
+
+  const filteredWords = VOCAB_LIST.filter(([num, sp, en]) => {
+    const matchSearch = !searchTerm ||
+      sp.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      en.toLowerCase().includes(searchTerm.toLowerCase());
+    const isLearned = learnedWords.includes(num);
+    const matchFilter = filterMode === 'all' || (filterMode === 'learned' && isLearned) || (filterMode === 'unlearned' && !isLearned);
+    return matchSearch && matchFilter;
+  });
+
+  const unlearnedWords = VOCAB_LIST.filter(([num]) => !learnedWords.includes(num));
+  const flashWords = filterMode === 'learned'
+    ? VOCAB_LIST.filter(([num]) => learnedWords.includes(num))
+    : unlearnedWords;
+
+  const nextFlash = () => { setFlashIdx(i => (i+1) % Math.max(1, flashWords.length)); setShowAnswer(false); };
+  const prevFlash = () => { setFlashIdx(i => (i-1+flashWords.length) % Math.max(1, flashWords.length)); setShowAnswer(false); };
+
+  const currentFlash = flashWords[flashIdx % Math.max(1, flashWords.length)];
+
+  // Group by category ranges
+  const categories = [
+    { label:'Core Words 1–100', range:[1,100] },
+    { label:'Core Words 101–200', range:[101,200] },
+    { label:'Numbers + Time', range:[201,257] },
+    { label:'Family + People', range:[258,295] },
+    { label:'Body', range:[296,335] },
+    { label:'Home + Objects', range:[336,415] },
+    { label:'Clothes + Colors', range:[416,490] },
+    { label:'Nature + Animals', range:[491,530] },
+    { label:'Time Expressions', range:[531,568] },
+    { label:'Places + Transport', range:[569,608] },
+    { label:'Work + Professions', range:[609,647] },
+    { label:'Emotions + Character', range:[648,687] },
+    { label:'Technology', range:[688,726] },
+    { label:'Actions + Daily Life', range:[727,801] },
+    { label:'Abstract + Connectors', range:[802,841] },
+    { label:'Sports + Leisure', range:[842,880] },
+    { label:'Health + Medical', range:[881,920] },
+    { label:'Money + Shopping', range:[921,948] },
+    { label:'Abstract Concepts', range:[949,998] },
+  ];
 
   return (
     <div>
       <div style={{ fontSize:18, fontWeight:700, marginBottom:4 }}>🇪🇸 Spanish</div>
       <div style={{ fontSize:11, color:T.textFaint, marginBottom:14 }}>
-        Goal: 1,000 words by Jan 30 · 1 hour conversation by June · Disaster response fluency
+        998 words · Goal: learned by Jan 30, 2027 · Disaster response fluency
       </div>
 
       {/* Progress summary */}
-      <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8, marginBottom:14 }}>
-        {[
-          { label:'Pimsleur', value:pimsleurCount, max:totalPimsleur, color:AMBER, unit:'lessons' },
-          { label:'LingoPie', value:lingopieCount, max:totalPimsleur, color:BLUE, unit:'videos' },
-          { label:'Vocab', value:vocabCount, max:targetVocab, color:TEAL, unit:'words' },
-        ].map(s => (
-          <div key={s.label} style={{ background:T.surface, border:`1px solid ${T.border}`,
-            borderRadius:8, padding:'10px 10px 8px' }}>
-            <div style={{ fontSize:10, color:T.textFaint }}>{s.label}</div>
-            <div style={{ fontSize:18, fontWeight:700, color:s.color }}>{s.value}</div>
-            <div style={{ fontSize:9, color:T.textFaint }}>{s.unit} / {s.max}</div>
-            <div style={{ marginTop:5 }}><ProgressBar value={s.value} max={s.max} color={s.color} /></div>
+      <div style={{ background:T.surface, border:`1px solid ${T.border}`,
+        borderRadius:10, padding:'12px 14px', marginBottom:14 }}>
+        <div style={{ display:'flex', justifyContent:'space-between', marginBottom:8 }}>
+          <span style={{ fontSize:13, fontWeight:700, color:TEAL }}>{learnedWords.length} / 998 words learned</span>
+          <span style={{ fontSize:11, color:T.textFaint }}>{Math.round(learnedWords.length/9.98)}%</span>
+        </div>
+        <ProgressBar value={learnedWords.length} max={998} color={TEAL} />
+        <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr', gap:8, marginTop:12 }}>
+          <div style={{ background:T.card, borderRadius:8, padding:'8px 10px' }}>
+            <div style={{ fontSize:10, color:T.textFaint }}>Pimsleur</div>
+            <div style={{ fontSize:18, fontWeight:700, color:AMBER }}>{pimsleurCount}</div>
+            <div style={{ fontSize:9, color:T.textFaint }}>lessons / 192</div>
           </div>
-        ))}
+          <div style={{ background:T.card, borderRadius:8, padding:'8px 10px' }}>
+            <div style={{ fontSize:10, color:T.textFaint }}>LingoPie</div>
+            <div style={{ fontSize:18, fontWeight:700, color:BLUE }}>{lingopieCount}</div>
+            <div style={{ fontSize:9, color:T.textFaint }}>videos / 192</div>
+          </div>
+        </div>
+        <div style={{ display:'flex', gap:8, marginTop:10 }}>
+          {[['Pimsleur',pimsleurCount,setPimsleurCount,AMBER,'pimsleurCount'],
+            ['LingoPie',lingopieCount,setLingopieCount,BLUE,'lingopieCount']].map(([label,val,setter,col,key]) => (
+            <div key={label} style={{ flex:1, display:'flex', gap:6 }}>
+              <button onClick={() => { const n=Math.max(0,val-1); setter(n); sv({[key]:n}); }}
+                style={{ flex:1, background:T.card, border:`1px solid ${T.border}`, borderRadius:6,
+                  padding:'6px', color:T.text, cursor:'pointer', fontSize:14 }}>−</button>
+              <button onClick={() => { const n=val+1; setter(n); sv({[key]:n}); }}
+                style={{ flex:2, background:col, border:'none', borderRadius:6,
+                  padding:'6px', color:'#111', cursor:'pointer', fontSize:12, fontWeight:700 }}>+1 {label}</button>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Tabs */}
       <div style={{ display:'flex', gap:6, marginBottom:14 }}>
-        {['track','vocab','lessons'].map(t => (
+        {[['vocab','📚 Words'],['flash','🎴 Flash'],['lessons','🎥 Lessons']].map(([t,label]) => (
           <button key={t} onClick={() => setTab(t)} style={{
             flex:1, padding:'8px 4px', borderRadius:8, border:'none',
             background: tab===t ? TEAL : T.surface,
             color: tab===t ? '#111' : T.textFaint,
             fontFamily:'Georgia,serif', fontSize:11, cursor:'pointer', fontWeight:700,
-          }}>{t}</button>
+          }}>{label}</button>
         ))}
       </div>
 
-      {tab === 'track' && (
-        <div>
-          {/* Pimsleur counter */}
-          <div style={{ background:T.surface, border:`1px solid ${T.border}`,
-            borderRadius:10, padding:'12px 14px', marginBottom:10 }}>
-            <div style={{ fontSize:12, fontWeight:700, color:AMBER, marginBottom:8 }}>Pimsleur Lessons</div>
-            <div style={{ fontSize:11, color:T.textFaint, marginBottom:10 }}>
-              Target: 16/month · Currently: lesson {pimsleurCount}
-            </div>
-            <div style={{ display:'flex', gap:8, alignItems:'center' }}>
-              <button onClick={() => { const n=Math.max(0,pimsleurCount-1); setPimsleurCount(n); sv({pimsleurCount:n}); }}
-                style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:6,
-                  padding:'8px 16px', color:T.text, cursor:'pointer', fontSize:16 }}>−</button>
-              <div style={{ flex:1, textAlign:'center', fontSize:22, fontWeight:700, color:AMBER }}>
-                {pimsleurCount}
-              </div>
-              <button onClick={() => { const n=pimsleurCount+1; setPimsleurCount(n); sv({pimsleurCount:n}); }}
-                style={{ background:AMBER, border:'none', borderRadius:6,
-                  padding:'8px 16px', color:'#111', cursor:'pointer', fontSize:16, fontWeight:700 }}>+</button>
-            </div>
-          </div>
-
-          {/* LingoPie counter */}
-          <div style={{ background:T.surface, border:`1px solid ${T.border}`,
-            borderRadius:10, padding:'12px 14px', marginBottom:10 }}>
-            <div style={{ fontSize:12, fontWeight:700, color:BLUE, marginBottom:8 }}>LingoPie Videos</div>
-            <div style={{ fontSize:11, color:T.textFaint, marginBottom:10 }}>
-              Target: 16/month · Currently: episode {lingopieCount}
-            </div>
-            <div style={{ display:'flex', gap:8, alignItems:'center' }}>
-              <button onClick={() => { const n=Math.max(0,lingopieCount-1); setLingopieCount(n); sv({lingopieCount:n}); }}
-                style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:6,
-                  padding:'8px 16px', color:T.text, cursor:'pointer', fontSize:16 }}>−</button>
-              <div style={{ flex:1, textAlign:'center', fontSize:22, fontWeight:700, color:BLUE }}>
-                {lingopieCount}
-              </div>
-              <button onClick={() => { const n=lingopieCount+1; setLingopieCount(n); sv({lingopieCount:n}); }}
-                style={{ background:BLUE, border:'none', borderRadius:6,
-                  padding:'8px 16px', color:'#111', cursor:'pointer', fontSize:16, fontWeight:700 }}>+</button>
-            </div>
-          </div>
-
-          {/* Vocab counter */}
-          <div style={{ background:T.surface, border:`1px solid ${T.border}`,
-            borderRadius:10, padding:'12px 14px', marginBottom:10 }}>
-            <div style={{ fontSize:12, fontWeight:700, color:TEAL, marginBottom:8 }}>
-              Vocabulary — {vocabCount} / 1,000 words
-            </div>
-            <div style={{ marginBottom:10 }}><ProgressBar value={vocabCount} max={1000} color={TEAL} /></div>
-            <div style={{ display:'flex', gap:8 }}>
-              <button onClick={() => { const n=Math.max(0,vocabCount-1); setVocabCount(n); sv({vocabCount:n}); }}
-                style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:6,
-                  padding:'8px 16px', color:T.text, cursor:'pointer' }}>−</button>
-              <div style={{ flex:1, textAlign:'center', fontSize:22, fontWeight:700, color:TEAL }}>{vocabCount}</div>
-              <button onClick={() => { const n=vocabCount+10; setVocabCount(n); sv({vocabCount:n}); }}
-                style={{ background:T.card, border:`1px solid ${T.border}`, borderRadius:6,
-                  padding:'8px 14px', color:TEAL, cursor:'pointer', fontWeight:700 }}>+10</button>
-              <button onClick={() => { const n=vocabCount+1; setVocabCount(n); sv({vocabCount:n}); }}
-                style={{ background:TEAL, border:'none', borderRadius:6,
-                  padding:'8px 16px', color:'#111', cursor:'pointer', fontWeight:700 }}>+1</button>
-            </div>
-          </div>
-        </div>
-      )}
-
+      {/* VOCAB TAB */}
       {tab === 'vocab' && (
         <div>
-          <div style={{ fontSize:12, fontWeight:700, color:TEAL, marginBottom:12 }}>
-            Vocabulary Categories — 1,000 words by {targetDate}
+          {/* Search + filter */}
+          <input
+            type="text" placeholder="Search Spanish or English..."
+            value={searchTerm} onChange={e => setSearchTerm(e.target.value)}
+            style={{ width:'100%', background:T.surface, border:`1px solid ${T.border}`,
+              borderRadius:8, padding:'10px 12px', color:T.text, fontFamily:'Georgia,serif',
+              fontSize:13, boxSizing:'border-box', marginBottom:8 }} />
+          <div style={{ display:'flex', gap:6, marginBottom:12 }}>
+            {[['all','All'],['unlearned','To Learn'],['learned','Learned']].map(([f,label]) => (
+              <button key={f} onClick={() => setFilterMode(f)} style={{
+                flex:1, padding:'6px', borderRadius:6, border:'none',
+                background: filterMode===f ? TEAL : T.surface,
+                color: filterMode===f ? '#111' : T.textFaint,
+                fontFamily:'Georgia,serif', fontSize:11, cursor:'pointer',
+              }}>{label}</button>
+            ))}
           </div>
-          {VOCAB_CATEGORIES.map((cat, i) => (
-            <div key={i} style={{ background:T.surface, border:`1px solid ${T.border}`,
-              borderRadius:8, padding:'10px 12px', marginBottom:8,
-              display:'flex', alignItems:'center', gap:10 }}>
-              <div style={{ width:28, height:28, borderRadius:14, background:TEAL+'33',
-                display:'flex', alignItems:'center', justifyContent:'center',
-                fontSize:11, fontWeight:700, color:TEAL, flexShrink:0 }}>{i+1}</div>
-              <div style={{ flex:1, fontSize:12, color:T.textSub }}>{cat}</div>
+
+          <div style={{ fontSize:11, color:T.textFaint, marginBottom:8 }}>
+            Showing {filteredWords.length} words — tap to mark learned
+          </div>
+
+          {/* Category groups (when no search) */}
+          {!searchTerm && filterMode === 'all' ? (
+            categories.map(cat => {
+              const catWords = VOCAB_LIST.filter(([n]) => n >= cat.range[0] && n <= cat.range[1]);
+              const catLearned = catWords.filter(([n]) => learnedWords.includes(n)).length;
+              return (
+                <details key={cat.label} style={{ marginBottom:8 }}>
+                  <summary style={{
+                    background:T.surface, border:`1px solid ${T.border}`,
+                    borderRadius:8, padding:'10px 12px', cursor:'pointer', listStyle:'none',
+                    display:'flex', justifyContent:'space-between', alignItems:'center',
+                  }}>
+                    <span style={{ fontSize:12, fontWeight:700, color:T.text }}>{cat.label}</span>
+                    <span style={{ fontSize:11, color: catLearned===catWords.length ? TEAL : T.textFaint }}>
+                      {catLearned}/{catWords.length}
+                    </span>
+                  </summary>
+                  <div style={{ background:T.card, border:`1px solid ${T.border}`,
+                    borderTop:'none', borderRadius:'0 0 8px 8px', padding:'8px 4px' }}>
+                    {catWords.map(([num, sp, en]) => {
+                      const learned = learnedWords.includes(num);
+                      return (
+                        <div key={num} onClick={() => toggleWord(num)} style={{
+                          display:'flex', alignItems:'center', gap:10, padding:'7px 10px',
+                          borderBottom:`1px solid ${T.border}`, cursor:'pointer',
+                          background: learned ? TEAL+'11' : 'transparent',
+                        }}>
+                          <div style={{ width:20, height:20, borderRadius:10, flexShrink:0,
+                            background: learned ? TEAL : 'transparent',
+                            border:`2px solid ${learned ? TEAL : T.border}`,
+                            display:'flex', alignItems:'center', justifyContent:'center' }}>
+                            {learned && <span style={{ fontSize:9, color:'#111', fontWeight:900 }}>✓</span>}
+                          </div>
+                          <span style={{ width:22, fontSize:9, color:T.textFaint, flexShrink:0 }}>{num}</span>
+                          <span style={{ flex:1, fontSize:13, fontWeight:700,
+                            color: learned ? T.textFaint : T.text }}>{sp}</span>
+                          <span style={{ fontSize:11, color:T.textFaint, textAlign:'right', maxWidth:120 }}>{en}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </details>
+              );
+            })
+          ) : (
+            /* Flat list for search/filter */
+            filteredWords.slice(0, 200).map(([num, sp, en]) => {
+              const learned = learnedWords.includes(num);
+              return (
+                <div key={num} onClick={() => toggleWord(num)} style={{
+                  display:'flex', alignItems:'center', gap:10, padding:'8px 10px',
+                  background: learned ? TEAL+'11' : T.surface,
+                  border:`1px solid ${learned ? TEAL+'44' : T.border}`,
+                  borderRadius:8, marginBottom:4, cursor:'pointer',
+                }}>
+                  <div style={{ width:20, height:20, borderRadius:10, flexShrink:0,
+                    background: learned ? TEAL : 'transparent',
+                    border:`2px solid ${learned ? TEAL : T.border}`,
+                    display:'flex', alignItems:'center', justifyContent:'center' }}>
+                    {learned && <span style={{ fontSize:9, color:'#111', fontWeight:900 }}>✓</span>}
+                  </div>
+                  <span style={{ width:22, fontSize:9, color:T.textFaint, flexShrink:0 }}>{num}</span>
+                  <span style={{ flex:1, fontSize:13, fontWeight:700,
+                    color: learned ? T.textFaint : T.text }}>{sp}</span>
+                  <span style={{ fontSize:11, color:T.textFaint }}>{en}</span>
+                </div>
+              );
+            })
+          )}
+          {!searchTerm && filterMode !== 'all' && filteredWords.length > 200 && (
+            <div style={{ textAlign:'center', color:T.textFaint, fontSize:11, padding:12 }}>
+              Showing first 200 of {filteredWords.length} — use search to narrow
             </div>
-          ))}
+          )}
         </div>
       )}
 
+      {/* FLASHCARD TAB */}
+      {tab === 'flash' && (
+        <div>
+          <div style={{ display:'flex', gap:6, marginBottom:14 }}>
+            {[['unlearned','Study New'],['learned','Review Learned']].map(([f,label]) => (
+              <button key={f} onClick={() => { setFilterMode(f); setFlashIdx(0); setShowAnswer(false); }} style={{
+                flex:1, padding:'8px', borderRadius:8, border:'none',
+                background: filterMode===f ? AMBER : T.surface,
+                color: filterMode===f ? '#111' : T.textFaint,
+                fontFamily:'Georgia,serif', fontSize:11, cursor:'pointer', fontWeight:700,
+              }}>{label}</button>
+            ))}
+          </div>
+
+          {flashWords.length === 0 ? (
+            <div style={{ textAlign:'center', padding:40, color:T.textFaint }}>
+              {filterMode === 'learned' ? 'No words learned yet — mark some in the Words tab.' : '🎉 All words learned!'}
+            </div>
+          ) : (
+            <div>
+              <div style={{ fontSize:11, color:T.textFaint, textAlign:'center', marginBottom:12 }}>
+                Card {(flashIdx % flashWords.length) + 1} of {flashWords.length}
+              </div>
+              {/* Flashcard */}
+              <div onClick={() => setShowAnswer(!showAnswer)} style={{
+                background:T.surface, border:`2px solid ${TEAL}`,
+                borderRadius:16, padding:'40px 20px', textAlign:'center',
+                marginBottom:16, cursor:'pointer', minHeight:160,
+                display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center',
+              }}>
+                {currentFlash && (
+                  <>
+                    <div style={{ fontSize:11, color:T.textFaint, marginBottom:8 }}>
+                      #{currentFlash[0]}
+                    </div>
+                    <div style={{ fontSize:28, fontWeight:700, color:TEAL, marginBottom:showAnswer ? 16 : 0 }}>
+                      {currentFlash[1]}
+                    </div>
+                    {showAnswer ? (
+                      <div style={{ fontSize:18, color:T.text, borderTop:`1px solid ${T.border}`,
+                        paddingTop:16, width:'100%' }}>{currentFlash[2]}</div>
+                    ) : (
+                      <div style={{ fontSize:11, color:T.textFaint, marginTop:12 }}>tap to reveal</div>
+                    )}
+                  </>
+                )}
+              </div>
+
+              {/* Controls */}
+              <div style={{ display:'flex', gap:8, marginBottom:12 }}>
+                <button onClick={prevFlash} style={{ flex:1, background:T.surface,
+                  border:`1px solid ${T.border}`, borderRadius:8, padding:'10px',
+                  color:T.text, cursor:'pointer', fontSize:16 }}>←</button>
+                {currentFlash && (
+                  <button onClick={() => { toggleWord(currentFlash[0]); nextFlash(); }} style={{
+                    flex:2, background: learnedWords.includes(currentFlash[0]) ? T.surface : TEAL,
+                    border:`1px solid ${learnedWords.includes(currentFlash[0]) ? T.border : TEAL}`,
+                    borderRadius:8, padding:'10px', color: learnedWords.includes(currentFlash[0]) ? T.textFaint : '#111',
+                    cursor:'pointer', fontSize:12, fontWeight:700, fontFamily:'Georgia,serif',
+                  }}>
+                    {learnedWords.includes(currentFlash[0]) ? '✓ Unmark' : '✓ Mark Learned'}
+                  </button>
+                )}
+                <button onClick={nextFlash} style={{ flex:1, background:T.surface,
+                  border:`1px solid ${T.border}`, borderRadius:8, padding:'10px',
+                  color:T.text, cursor:'pointer', fontSize:16 }}>→</button>
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* LESSONS TAB */}
       {tab === 'lessons' && (
         <div>
           <div style={{ fontSize:12, fontWeight:700, color:AMBER, marginBottom:12 }}>
-            Video Lesson Prompts (LingoPie / YouTube)
+            Video Lesson Prompts — 16 per month
           </div>
           {SPANISH_VIDEO_PROMPTS.map((v, i) => (
             <div key={v.id} style={{ background:T.surface, border:`1px solid ${T.border}`,
@@ -1125,8 +2293,6 @@ function SpanishView({ T, TEAL, AMBER, BLUE, PURPLE,
     </div>
   );
 }
-
-// ── HONEYSUCKLE VIEW ──
 function HoneysuckleView({ T, TEAL, AMBER, BLUE, PURPLE,
   hsVideosDone, setHsVideosDone, hsReelsDone, setHsReelsDone, sv, ProgressBar, Pill }) {
 
